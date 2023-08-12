@@ -1,2 +1,7 @@
-.idea,
-.__PyCaches__
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+.idea/
+__pycache__/
+.env
