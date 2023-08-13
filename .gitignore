@@ -3,5 +3,7 @@
 *.sass.map
 *.scss.map
 .idea/
+*.idea/
 __pycache__/
+*__pycache__/
 .env
