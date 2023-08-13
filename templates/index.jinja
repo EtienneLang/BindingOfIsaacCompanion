@@ -1,13 +1,35 @@
 {% extends "base.jinja" %}
 {% block contenu %}
-    <section>
-        <p>Bienvenue sur l'accueil du Companion de CHAD</p>
-        <p>Veuillez entrer votre steam ID, </p>
+    <section class="text-center p-5">
+        <h1>Binding of Isaac Companion</h1>
+        <p>To have access to the companion, please enter your Steam Id</p>
+
         <form>
             <label for="steamid">STEAM ID :</label>
             <input type="text" name="steamid" placeholder="STEAM ID">
             <input type="submit" value="Valider">
         </form>
+    </section>
 
+    <section>
+        <h4>
+            Informations about Isaac Companion
+        </h4>
+        <div>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h5>Card</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus dolorem doloribus facere libero maiores, maxime mollitia nemo nesciunt provident repellat, saepe soluta tempora! Impedit laboriosam perferendis reiciendis voluptatem voluptatibus.</p>
+                </div>
+                <div>
+                    <h5>Card</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus dolorem doloribus facere libero maiores, maxime mollitia nemo nesciunt provident repellat, saepe soluta tempora! Impedit laboriosam perferendis reiciendis voluptatem voluptatibus.</p>
+                </div>
+                <div>
+                    <h5>Card</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus dolorem doloribus facere libero maiores, maxime mollitia nemo nesciunt provident repellat, saepe soluta tempora! Impedit laboriosam perferendis reiciendis voluptatem voluptatibus.</p>
+                </div>
+            </div>
+        </div>
     </section>
 {% endblock %}
