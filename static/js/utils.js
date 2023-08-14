@@ -15,14 +15,14 @@ function steamIdToURL() {
         steamIdValidationText.innerHTML = "Please enter a Steam ID ;(";
         valide = false;
     }
-    else if (isNaN(steamIdInput.value)) {
-        steamIdValidationText.innerHTML = "A Steam ID is only composed of numbers";
-        valide = false;
-    }
-    else if (steamIdInput.value.length !== 17) {
-        steamIdValidationText.innerHTML = "A Steam ID does not count more than 17 characters";
-        valide = false;
-    }
+    // else if (isNaN(steamIdInput.value)) {
+    //     steamIdValidationText.innerHTML = "A Steam ID is only composed of numbers";
+    //     valide = false;
+    // }
+    // else if (steamIdInput.value.length !== 17) {
+    //     steamIdValidationText.innerHTML = "A Steam ID does not count more than 17 characters";
+    //     valide = false;
+    // }
 
     if (valide){
         location.replace("http://127.0.0.1:5000/api/" + steamIdInput.value);
