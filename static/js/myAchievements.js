@@ -46,9 +46,8 @@ function creerAchievementCards() {
     for (let perso in dicoTetePerso)
     {
         const card = document.createElement("div");
-        card.classList.add("card");
-        card.classList.add("w-25");
-        card.classList.add("col-lg-3");
+        card.classList.add("col-xl-3");
+        card.classList.add("col-lg-4");
         card.classList.add("col-md-6");
 
         // Entête de la carte
