@@ -1,16 +1,17 @@
 {% extends "base.jinja" %}
+{% block title %}BoI Companion{% endblock %}
 {% block scripts %}
     <script src="/static/js/utils.js" defer></script>
 {% endblock %}
 {% block contenu %}
     <section class="text-center p-5">
         <h1>Binding of Isaac Companion</h1>
-        <p>To have access to the companion, please enter your Steam ID bellow.</p>
+        <p>To have access to the companion, please enter your Steam/Profile ID bellow.</p>
 
         <form>
-            <label for="profileid-input" >PROFILE ID :</label>
-            <input type="text" id="profileid-input" name="profileid-input" placeholder="Profile Id...">
-            <input type="button" id="profileid-button" value="Let's go">
+            <label for="steamid-input" >STEAM ID :</label>
+            <input type="text" id="steamid-input" name="steamid-input" placeholder="Steam Id...">
+            <input type="button" id="steamid-button" value="Let's go">
             <div class="invalid-feedback" id="validation_steam_id"></div>
         </form>
     </section>
