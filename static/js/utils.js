@@ -1,8 +1,8 @@
 "use strict";
 
 
-const steamIdInput = document.getElementById("profileid-input");
-const steamIdButton = document.getElementById("profileid-button");
+const steamIdInput = document.getElementById("steamid-input");
+const steamIdButton = document.getElementById("steamid-button");
 let steamIdValidationText = document.getElementById("validation_steam_id");
 
 
