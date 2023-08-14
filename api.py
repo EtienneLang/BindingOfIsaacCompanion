@@ -65,4 +65,10 @@ def get_all_steam_information(profileid):
         player_name=player_information["response"]["players"][0]["personaname"]
     )
 
+
+@bp_api.route("/<profileid>/MyAchievements")
+def load_all_achievements(profileid):
+
+    return render_template("my_achievements.jinja")
+
     

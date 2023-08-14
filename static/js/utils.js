@@ -1,8 +1,10 @@
 "use strict";
 
+
 const steamIdInput = document.getElementById("profileid-input");
 const steamIdButton = document.getElementById("profileid-button");
 let steamIdValidationText = document.getElementById("validation_steam_id");
+
 
 
 /**
@@ -30,8 +32,9 @@ function steamIdToURL() {
     else{
         steamIdInput.className = "is-invalid";
     }
-
 }
+
+
 
 async function initialisation() {
     steamIdButton.addEventListener('click', steamIdToURL);
