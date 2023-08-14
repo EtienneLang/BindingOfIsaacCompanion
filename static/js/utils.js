@@ -6,7 +6,6 @@ const steamIdButton = document.getElementById("steamid-button");
 let steamIdValidationText = document.getElementById("validation_steam_id");
 
 
-
 /**
  * Permets de rediriger vers la page de l'utilisateur
  */
@@ -33,7 +32,6 @@ function steamIdToURL() {
         steamIdInput.className = "is-invalid";
     }
 }
-
 
 
 async function initialisation() {

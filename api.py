@@ -9,8 +9,11 @@ steam_api = webapi.WebAPI(steam_api_key)
 
 def get_steam_id(profile_id):
     """Fonction pour renvoyer le steam_id du joueur"""
-    base_url = "https://steamcommunity.com/id/"
-    return steamid.from_url(base_url + profile_id)
+    steam_id = steamid.SteamID(profile_id)
+    if not steam_id.is_valid():
+        base_url = "https://steamcommunity.com/id/"
+        steam_id = steamid.from_url(base_url + profile_id)
+    return steam_id
 
 
 def get_achievements(steam_id):
