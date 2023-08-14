@@ -23,9 +23,9 @@ function steamIdToURL() {
         steamIdValidationText.innerHTML = "A Steam ID does not count more than 17 characters";
         valide = false;
     }
-    
+
     if (valide){
-        location.replace(location.href +"/api/" + steamIdInput.value);
+        location.replace("http://127.0.0.1:5000/api/" + steamIdInput.value);
     }
     else{
         steamIdInput.className = "is-invalid";
