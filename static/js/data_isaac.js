@@ -78,3 +78,258 @@ const cainAchievements = {
         "Beast" : "445",
         "AllAchievements" : "261"
 }
+const taintedIsaacAchievements = {
+    "Satan" : "548",
+    "BlueBaby" : "548",
+    "BossRush" : "618",
+    "Isaac" : "548",
+    "TheLamb" : "548",
+    "Heart" : "167", //
+    "Hush" : "618",
+    "UltraGreedier" : "541",
+    "MegaSatan" : "601",
+    "Delirium" : "584",
+    "Mother" : "549",
+    "Beast" : "491",
+    "AllAchievements" : "253" //
+}
+const taintedMagdaleneAchievements = {
+    "Satan" : "550",
+    "BlueBaby" : "550",
+    "BossRush" : "619",
+    "Isaac" : "550",
+    "TheLamb" : "550",
+    "Heart" : "168", //
+    "Hush" : "619",
+    "UltraGreedier" : "530",
+    "MegaSatan" : "602",
+    "Delirium" : "585",
+    "Mother" : "551",
+    "Beast" : "492",
+    "AllAchievements" : "254" //
+}
+const taintedCainAchievements = {
+    "Satan" : "552",
+    "BlueBaby" : "552",
+    "BossRush" : "620",
+    "Isaac" : "552",
+    "TheLamb" : "552",
+    "Heart" : "171", //
+    "Hush" : "620",
+    "UltraGreedier" : "534",
+    "MegaSatan" : "603",
+    "Delirium" : "586",
+    "Mother" : "553",
+    "Beast" : "493",
+    "AllAchievements" : "261" //
+}
+const taintedJudasAchievements = {
+    "Satan" : "554",
+    "BlueBaby" : "554",
+    "BossRush" : "621",
+    "Isaac" : "554",
+    "TheLamb" : "554",
+    "Heart" : "171", //
+    "Hush" : "621",
+    "UltraGreedier" : "525",
+    "MegaSatan" : "604",
+    "Delirium" : "587",
+    "Mother" : "555",
+    "Beast" : "494",
+    "AllAchievements" : "261" //
+}
+const taintedBlueBabyAchievements = {
+    "Satan" : "556",
+    "BlueBaby" : "556",
+    "BossRush" : "622",
+    "Isaac" : "556",
+    "TheLamb" : "556",
+    "Heart" : "171", //
+    "Hush" : "622",
+    "UltraGreedier" : "528",
+    "MegaSatan" : "605",
+    "Delirium" : "588",
+    "Mother" : "557",
+    "Beast" : "495",
+    "AllAchievements" : "261" //
+}
+const taintedEveAchievements = {
+    "Satan" : "558",
+    "BlueBaby" : "558",
+    "BossRush" : "623",
+    "Isaac" : "558",
+    "TheLamb" : "558",
+    "Heart" : "171", //
+    "Hush" : "623",
+    "UltraGreedier" : "527",
+    "MegaSatan" : "606",
+    "Delirium" : "589",
+    "Mother" : "559",
+    "Beast" : "496",
+    "AllAchievements" : "261" //
+}
+const taintedSamsonAchievements = {
+    "Satan" : "560",
+    "BlueBaby" : "560",
+    "BossRush" : "624",
+    "Isaac" : "560",
+    "TheLamb" : "560",
+    "Heart" : "171", //
+    "Hush" : "624",
+    "UltraGreedier" : "535",
+    "MegaSatan" : "607",
+    "Delirium" : "590",
+    "Mother" : "561",
+    "Beast" : "497",
+    "AllAchievements" : "261" //
+}
+const taintedAzazelAchievements = {
+    "Satan" : "562",
+    "BlueBaby" : "562",
+    "BossRush" : "625",
+    "Isaac" : "562",
+    "TheLamb" : "562",
+    "Heart" : "171", //
+    "Hush" : "625",
+    "UltraGreedier" : "539",
+    "MegaSatan" : "608",
+    "Delirium" : "591",
+    "Mother" : "563",
+    "Beast" : "498",
+    "AllAchievements" : "261" //
+}
+const taintedLazarusAchievements = {
+    "Satan" : "564",
+    "BlueBaby" : "564",
+    "BossRush" : "626",
+    "Isaac" : "564",
+    "TheLamb" : "564",
+    "Heart" : "171", //
+    "Hush" : "625",
+    "UltraGreedier" : "543",
+    "MegaSatan" : "609",
+    "Delirium" : "592",
+    "Mother" : "565",
+    "Beast" : "499",
+    "AllAchievements" : "261" //
+}
+const taintedEdenAchievements = {
+    "Satan" : "566",
+    "BlueBaby" : "566",
+    "BossRush" : "627",
+    "Isaac" : "566",
+    "TheLamb" : "566",
+    "Heart" : "171", //
+    "Hush" : "627",
+    "UltraGreedier" : "544",
+    "MegaSatan" : "610",
+    "Delirium" : "593",
+    "Mother" : "567",
+    "Beast" : "500",
+    "AllAchievements" : "261" //
+}
+const taintedLostAchievements = {
+    "Satan" : "568",
+    "BlueBaby" : "568",
+    "BossRush" : "628",
+    "Isaac" : "568",
+    "TheLamb" : "568",
+    "Heart" : "171", //
+    "Hush" : "628",
+    "UltraGreedier" : "524",
+    "MegaSatan" : "611",
+    "Delirium" : "594",
+    "Mother" : "569",
+    "Beast" : "501",
+    "AllAchievements" : "261" //
+}
+const taintedLilithAchievements = {
+    "Satan" : "570",
+    "BlueBaby" : "570",
+    "BossRush" : "629",
+    "Isaac" : "570",
+    "TheLamb" : "570",
+    "Heart" : "171", //
+    "Hush" : "629",
+    "UltraGreedier" : "526",
+    "MegaSatan" : "612",
+    "Delirium" : "595",
+    "Mother" : "571",
+    "Beast" : "502",
+    "AllAchievements" : "261" //
+}
+const taintedKeeperAchievements = {
+    "Satan" : "572",
+    "BlueBaby" : "572",
+    "BossRush" : "630",
+    "Isaac" : "572",
+    "TheLamb" : "572",
+    "Heart" : "171", //
+    "Hush" : "630",
+    "UltraGreedier" : "536",
+    "MegaSatan" : "613",
+    "Delirium" : "596",
+    "Mother" : "573",
+    "Beast" : "503",
+    "AllAchievements" : "261" //
+}
+const taintedApollyonAchievements = {
+    "Satan" : "574",
+    "BlueBaby" : "574",
+    "BossRush" : "631",
+    "Isaac" : "574",
+    "TheLamb" : "574",
+    "Heart" : "171", //
+    "Hush" : "631",
+    "UltraGreedier" : "540",
+    "MegaSatan" : "614",
+    "Delirium" : "597",
+    "Mother" : "575",
+    "Beast" : "504",
+    "AllAchievements" : "261" //
+}
+const taintedForgottenAchievements = {
+    "Satan" : "576",
+    "BlueBaby" : "576",
+    "BossRush" : "632",
+    "Isaac" : "576",
+    "TheLamb" : "576",
+    "Heart" : "171", //
+    "Hush" : "632",
+    "UltraGreedier" : "537",
+    "MegaSatan" : "615",
+    "Delirium" : "598",
+    "Mother" : "577",
+    "Beast" : "505",
+    "AllAchievements" : "261" //
+}
+const taintedBethanyAchievements = {
+    "Satan" : "578",
+    "BlueBaby" : "578",
+    "BossRush" : "633",
+    "Isaac" : "578",
+    "TheLamb" : "578",
+    "Heart" : "171", //
+    "Hush" : "633",
+    "UltraGreedier" : "529",
+    "MegaSatan" : "616",
+    "Delirium" : "599",
+    "Mother" : "579",
+    "Beast" : "506",
+    "AllAchievements" : "261" //
+}
+const taintedJacobAchievements = {
+    "Satan" : "580",
+    "BlueBaby" : "580",
+    "BossRush" : "634",
+    "Isaac" : "580",
+    "TheLamb" : "580",
+    "Heart" : "171", //
+    "Hush" : "634",
+    "UltraGreedier" : "542",
+    "MegaSatan" : "617",
+    "Delirium" : "600",
+    "Mother" : "581",
+    "Beast" : "507",
+    "AllAchievements" : "261" //
+}
