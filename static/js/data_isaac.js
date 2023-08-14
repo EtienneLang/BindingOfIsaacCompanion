@@ -1,5 +1,5 @@
 
-export const dicoTetePerso = {
+const dicoTetePerso = {
         "HeadIsaac": "/static/images/CharactersHeads/HeadIsaac.png",
         "HeadMagdalene": "/static/images/CharactersHeads/HeadMagdalene.png",
         "HeadCain": "/static/images/CharactersHeads/HeadCain.png",
@@ -32,4 +32,49 @@ export const dicoTetePerso = {
         "HeadTaintedApollyon": "/static/images/CharactersHeads/HeadTaintedApollyon.png",
         "HeadTaintedForgotten": "/static/images/CharactersHeads/HeadTaintedForgotten.png",
         "HeadTaintedJacob": "/static/images/CharactersHeads/HeadTaintedJacob.png",
-    }
+}
+const isaacAchievements = {
+        "Satan" : "43",
+        "BlueBaby" : "49",
+        "BossRush" : "70",
+        "Isaac" : "107",
+        "TheLamb" : "149",
+        "Heart" : "167",
+        "Hush" : "179",
+        "UltraGreedier" : "296",
+        "MegaSatan" : "205",
+        "Delirium" : "281",
+        "Mother" : "440",
+        "Beast" : "441",
+        "AllAchievements" : "253"
+}
+const magdaleneAchievements = {
+        "Satan" : "45",
+        "BlueBaby" : "50",
+        "BossRush" : "109",
+        "Isaac" : "20",
+        "TheLamb" : "71",
+        "Heart" : "168",
+        "Hush" : "180",
+        "UltraGreedier" : "297",
+        "MegaSatan" : "206",
+        "Delirium" : "283",
+        "Mother" : "442",
+        "Beast" : "443",
+        "AllAchievements" : "254"
+}
+const cainAchievements = {
+        "Satan" : "46",
+        "BlueBaby" : "75",
+        "BossRush" : "110",
+        "Isaac" : "21",
+        "TheLamb" : "51",
+        "Heart" : "171",
+        "Hush" : "181",
+        "UltraGreedier" : "298",
+        "MegaSatan" : "207",
+        "Delirium" : "284",
+        "Mother" : "444",
+        "Beast" : "445",
+        "AllAchievements" : "261"
+}
