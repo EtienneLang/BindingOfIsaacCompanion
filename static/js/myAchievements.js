@@ -48,48 +48,52 @@ function afficherAchievements() {
     let content ="";
     let allAchievementsDone = false;
     //Je devrais faire un switch ici, à faire plus tard
-    for(let achievement in isaacAchievements){
-        if(achievementsList[i] === isaacAchievements["AllAchievements"]) {
+    for(let perso in dataAllAchievements){
+        if(achievementsList[i] === dataAllAchievements[perso]["AllAchievements"]) {
             content += "all achievements";
             allAchievementsDone = true;
         }
-        else if(achievementsList[i] === isaacAchievements["Satan"]) {
+        else if(achievementsList[i] === dataAllAchievements[perso]["Satan"]) {
             content += "satan";
         }
-        else if(achievementsList[i] === isaacAchievements["BlueBaby"]) {
+        else if(achievementsList[i] === dataAllAchievements[perso]["BlueBaby"]) {
             content += "blue baby";
         }
-        else if(achievementsList[i] === isaacAchievements["BossRush"]) {
+        else if(achievementsList[i] === dataAllAchievements[perso]["BossRush"]) {
             content += "boss rush";
         }
-        else if(achievementsList[i] === isaacAchievements["Isaac"]) {
+        else if(achievementsList[i] === dataAllAchievements[perso]["Isaac"]) {
             content += "isaac";
         }
-        else if(achievementsList[i] === isaacAchievements["TheLamb"]) {
+        else if(achievementsList[i] === dataAllAchievements[perso]["TheLamb"]) {
             content += "the lamb";
         }
-        else if(achievementsList[i] === isaacAchievements["Heart"]) {
+        else if(achievementsList[i] === dataAllAchievements[perso]["Heart"]) {
             content += "heart";
         }
-        else if(achievementsList[i] === isaacAchievements["Hush"]) {
+        else if(achievementsList[i] === dataAllAchievements[perso]["Hush"]) {
             content += "hush";
         }
-        else if(achievementsList[i] === isaacAchievements["UltraGreedier"]) {
+        else if(achievementsList[i] === dataAllAchievements[perso]["UltraGreedier"]) {
             content += "ultra greedier";
         }
-        else if (achievementsList[i] === isaacAchievements["MegaSatan"]) {
+        else if (achievementsList[i] === dataAllAchievements[perso]["MegaSatan"]) {
             content += "mega satan";
         }
-        else if (achievementsList[i] === isaacAchievements["Delirium"]) {
+        else if (achievementsList[i] === dataAllAchievements[perso]["Delirium"]) {
             content += "delirium";
         }
-        else if (achievementsList[i] === isaacAchievements["Mother"]) {
+        else if (achievementsList[i] === dataAllAchievements[perso]["Mother"]) {
             content += "mother";
         }
-        else if (achievementsList[i] === isaacAchievements["Beast"]) {
+        else if (achievementsList[i] === dataAllAchievements[perso]["Beast"]) {
             content += "beast";
         }
     }
+}
+
+function placeCompletionMark() {
+
 }
 
 function get_all_completed_achievements() {
@@ -100,6 +104,7 @@ function get_all_completed_achievements() {
             "GET",
             null,
             controleur);
+
         return achievements;
     } catch (error) {
         console.log(error);

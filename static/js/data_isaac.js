@@ -33,6 +33,7 @@ const dicoTetePerso = {
         "HeadTaintedForgotten": "/static/images/CharactersHeads/HeadTaintedForgotten.png",
         "HeadTaintedJacob": "/static/images/CharactersHeads/HeadTaintedJacob.png",
 }
+
 const isaacAchievements = {
         "Satan" : "43",
         "BlueBaby" : "49",
@@ -332,4 +333,40 @@ const taintedJacobAchievements = {
     "Mother" : "581",
     "Beast" : "507",
     "AllAchievements" : "261" //
+}
+
+const dataAllAchievements = {
+    isaac:isaacAchievements,
+    magdalene : magdaleneAchievements,
+    cain : cainAchievements,
+    //judas : judasAchievements,
+    // ??? : blueBabyAchievements,
+    // eve : eveAchievements,
+    // samson : samsonAchievements,
+    // azazel : azazelAchievements,
+    // eden : edenAchievements,
+    // theLost : theLostAchievements,
+    // lazarus : lazarusAchievements,
+    // lilith : lilithAchievements,
+    // keeper : keeperAchievements,
+    // apollyon : apollyonAchievements,
+    // forgotten : forgottenAchievements,
+    // bethany : bethanyAchievements,
+    // jacob : jacobAchievements,
+    taintedIsaac : taintedIsaacAchievements,
+    taintedMagdalene : taintedMagdaleneAchievements,
+    taintedCain : taintedCainAchievements,
+    taintedJudas : taintedJudasAchievements,
+    taintedBlueBaby : taintedBlueBabyAchievements,
+    taintedEve : taintedEveAchievements,
+    taintedSamson : taintedSamsonAchievements,
+    taintedAzazel : taintedAzazelAchievements,
+    taintedEden : taintedEdenAchievements,
+    taintedLost : taintedLostAchievements,
+    taintedLilith : taintedLilithAchievements,
+    taintedKeeper : taintedKeeperAchievements,
+    taintedApollyon : taintedApollyonAchievements,
+    taintedForgotten : taintedForgottenAchievements,
+    taintedBethany : taintedBethanyAchievements,
+    taintedJacob : taintedJacobAchievements
 }
