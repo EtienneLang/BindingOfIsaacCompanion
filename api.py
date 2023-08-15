@@ -71,7 +71,24 @@ def get_all_steam_information(profileid):
 
 @bp_api.route("/<profileid>/MyAchievements")
 def load_all_achievements(profileid):
+    steam_id = get_steam_id(profileid)
+    achievements = get_achievements(steam_id)
+    list_achievements = []
+    for achievement in achievements["playerstats"]["achievements"]:
+        if achievement["achieved"] == 1:
+            list_achievements.append(achievement["apiname"])
+
+    session["achievements"] = list_achievements
 
     return render_template("my_achievements.jinja")
+
+
+@bp_api.route("/MyAchievements/get_all_completed_achievements", methods=["GET"])
+def read_session():
+    """Fonction pour lire la session à partir du JS"""
+    if "achievements" in session:
+        return session["achievements"]
+    else:
+        return []
 
     

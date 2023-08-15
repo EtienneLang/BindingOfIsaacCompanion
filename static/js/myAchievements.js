@@ -1,42 +1,7 @@
 "use strict";
 
-
-const dicoTetePerso = {
-        "HeadIsaac": "/static/images/CharactersHeads/HeadIsaac.png",
-        "HeadMagdalene": "/static/images/CharactersHeads/HeadMagdalene.png",
-        "HeadCain": "/static/images/CharactersHeads/HeadCain.png",
-        "HeadJudas": "/static/images/CharactersHeads/HeadJudas.png",
-        "HeadBlueBaby": "/static/images/CharactersHeads/HeadBlueBaby.png",
-        "HeadEve": "/static/images/CharactersHeads/HeadEve.png",
-        "HeadSamson": "/static/images/CharactersHeads/HeadSamson.png",
-        "HeadAzazel": "/static/images/CharactersHeads/HeadAzazel.png",
-        "HeadLazarus": "/static/images/CharactersHeads/HeadLazarus.png",
-        "HeadEden": "/static/images/CharactersHeads/HeadEden.png",
-        "HeadLost": "/static/images/CharactersHeads/HeadLost.png",
-        "HeadLilith": "/static/images/CharactersHeads/HeadLilith.png",
-        "HeadKeeper": "/static/images/CharactersHeads/HeadKeeper.png",
-        "HeadApollyon": "/static/images/CharactersHeads/HeadApollyon.png",
-        "HeadForgotten": "/static/images/CharactersHeads/HeadForgotten.png",
-        "HeadJacob": "/static/images/CharactersHeads/HeadJacob.png",
-        "HeadTaintedIsaac": "/static/images/CharactersHeads/HeadTaintedIsaac.png",
-        "HeadTaintedMagdalene": "/static/images/CharactersHeads/HeadTaintedMagdalene.png",
-        "HeadTaintedCain": "/static/images/CharactersHeads/HeadTaintedCain.png",
-        "HeadTaintedJudas": "/static/images/CharactersHeads/HeadTaintedJudas.png",
-        "HeadTaintedBlueBaby": "/static/images/CharactersHeads/HeadTaintedBlueBaby.png",
-        "HeadTaintedEve": "/static/images/CharactersHeads/HeadTaintedEve.png",
-        "HeadTaintedSamson": "/static/images/CharactersHeads/HeadTaintedSamson.png",
-        "HeadTaintedAzazel": "/static/images/CharactersHeads/HeadTaintedAzazel.png",
-        "HeadTaintedLazarus": "/static/images/CharactersHeads/HeadTaintedLazarus.png",
-        "HeadTaintedEden": "/static/images/CharactersHeads/HeadTaintedEden.png",
-        "HeadTaintedLost": "/static/images/CharactersHeads/HeadTaintedLost.png",
-        "HeadTaintedLilith": "/static/images/CharactersHeads/HeadTaintedLilith.png",
-        "HeadTaintedKeeper": "/static/images/CharactersHeads/HeadTaintedKeeper.png",
-        "HeadTaintedApollyon": "/static/images/CharactersHeads/HeadTaintedApollyon.png",
-        "HeadTaintedForgotten": "/static/images/CharactersHeads/HeadTaintedForgotten.png",
-        "HeadTaintedJacob": "/static/images/CharactersHeads/HeadTaintedJacob.png",
-    }
 const myAchievementsSection = document.getElementById("myAchievementsId");
-
+let controleur = null;
 /**
  * Permets de creer les cartes d'achievements
  */
@@ -62,19 +27,88 @@ function creerAchievementCards() {
         const cardBody = document.createElement("div");
         cardBody.classList.add("text-center");
         cardBody.classList.add("card-body");
-        const sheetImg = document.createElement("img");
-        sheetImg.src = "/static/images/AchievementSheet/CompletionSheet.png";
-        sheetImg.classList.add("w-75");
-        cardBody.append(sheetImg);
+        cardBody.style = "background-image: url('/static/images/AchievementSheet/CompletionSheet.png'); " +
+            "background-repeat: no-repeat; " +
+            "background-position: center; " +
+            "background-size:225px;";
+        const sheetDiv = document.createElement("div");
+        sheetDiv.style = "height: 250px; border-style: none;"
+        sheetDiv.classList.add("w-75");
+        cardBody.append(sheetDiv);
         card.append(cardBody);
 
         myAchievementsSection.append(card);
     }
 }
 
+
+function afficherAchievements() {
+    const achievementsList = get_all_completed_achievements();
+    let i = 0;
+    let content ="";
+    let allAchievementsDone = false;
+    //Je devrais faire un switch ici, à faire plus tard
+    for(let achievement in isaacAchievements){
+        if(achievementsList[i] === isaacAchievements["AllAchievements"]) {
+            content += "all achievements";
+            allAchievementsDone = true;
+        }
+        else if(achievementsList[i] === isaacAchievements["Satan"]) {
+            content += "satan";
+        }
+        else if(achievementsList[i] === isaacAchievements["BlueBaby"]) {
+            content += "blue baby";
+        }
+        else if(achievementsList[i] === isaacAchievements["BossRush"]) {
+            content += "boss rush";
+        }
+        else if(achievementsList[i] === isaacAchievements["Isaac"]) {
+            content += "isaac";
+        }
+        else if(achievementsList[i] === isaacAchievements["TheLamb"]) {
+            content += "the lamb";
+        }
+        else if(achievementsList[i] === isaacAchievements["Heart"]) {
+            content += "heart";
+        }
+        else if(achievementsList[i] === isaacAchievements["Hush"]) {
+            content += "hush";
+        }
+        else if(achievementsList[i] === isaacAchievements["UltraGreedier"]) {
+            content += "ultra greedier";
+        }
+        else if (achievementsList[i] === isaacAchievements["MegaSatan"]) {
+            content += "mega satan";
+        }
+        else if (achievementsList[i] === isaacAchievements["Delirium"]) {
+            content += "delirium";
+        }
+        else if (achievementsList[i] === isaacAchievements["Mother"]) {
+            content += "mother";
+        }
+        else if (achievementsList[i] === isaacAchievements["Beast"]) {
+            content += "beast";
+        }
+    }
+}
+
+function get_all_completed_achievements() {
+    controleur = new AbortController()
+    try {
+        const achievements = envoyerRequeteAjax(
+            "/api/MyAchievements/get_all_completed_achievements",
+            "GET",
+            null,
+            controleur);
+        return achievements;
+    } catch (error) {
+        console.log(error);
+    }
+}
 async function initialisation() {
 
 }
 
 window.addEventListener('load', initialisation)
 window.addEventListener('load', creerAchievementCards);
+window.addEventListener('load', afficherAchievements);
