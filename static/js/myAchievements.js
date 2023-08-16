@@ -6,6 +6,7 @@ let controleur = null;
  * Permets de creer les cartes d'achievements
  */
 function creerAchievementCards() {
+    let i = 0;
     for (let perso in dicoTetePerso)
     {
         const card = document.createElement("div");
@@ -34,10 +35,12 @@ function creerAchievementCards() {
         const sheetDiv = document.createElement("div");
         sheetDiv.style = "height: 250px; border-style: none;"
         sheetDiv.classList.add("w-75");
+        sheetDiv.id = `CompletionSheet_${i}`;
         cardBody.append(sheetDiv);
         card.append(cardBody);
 
         myAchievementsSection.append(card);
+        i++;
     }
 }
 
@@ -45,24 +48,18 @@ function creerAchievementCards() {
 async function afficherAchievements() {
     const completedAchievementsList = await get_all_completed_achievements();
     console.log(completedAchievementsList);
-    const arrayTest = Array.isArray(completedAchievementsList);
-    let i = 0;
-    let content ="";
-    let allAchievementsDone = false;
-    const divCompletion = document.createElement("div");
-    //Je devrais faire un switch ici, à faire plus tard
-    for(let perso in dataAllAchievements){
-        let allo = completedAchievementsList.length;
-        let allo2 = [1,2,3];
-        for(let i=0; i < completedAchievementsList; i++) {
 
+    //Je devrais faire un switch ici, à faire plus tard
+    let iteration = 0;
+    for(let perso in dataAllAchievements){
+        const divCompletion = document.createElement("div");
+        let idCard = document.getElementById(`CompletionSheet_${iteration}`);
+        for(let i=0; i < completedAchievementsList.length; i++) {
             //Si on a tous les achievements, on sort de la boucle
-            if(completedAchievementsList[i] === dataAllAchievements[perso]["AllAchievements"]) {
-                content += "all achievements";
-                allAchievementsDone = true;
-                break;
-            }
-            else if(completedAchievementsList[i] === dataAllAchievements[perso]["Satan"]) {
+            // if(completedAchievementsList[i] === dataAllAchievements[perso]["AllAchievements"]) {
+            //     break;
+            // }
+            if(completedAchievementsList[i] === dataAllAchievements[perso]["Satan"]) {
                 placeCompletionMark("Satan", divCompletion);
             }
             else if(completedAchievementsList[i] === dataAllAchievements[perso]["BlueBaby"]) {
@@ -89,9 +86,6 @@ async function afficherAchievements() {
             else if (completedAchievementsList[i] === dataAllAchievements[perso]["MegaSatan"]) {
                 placeCompletionMark("MegaSatan", divCompletion);
             }
-            else if (completedAchievementsList[i] === dataAllAchievements[perso]["Delirium"]) {
-                placeCompletionMark("Delirium", divCompletion);
-            }
             else if (completedAchievementsList[i] === dataAllAchievements[perso]["Mother"]) {
                 placeCompletionMark("Mother", divCompletion);
             }
@@ -99,6 +93,8 @@ async function afficherAchievements() {
                 placeCompletionMark("Beast", divCompletion);
             }
         }
+        idCard.append(divCompletion);
+        iteration++;
     }
 
 }
