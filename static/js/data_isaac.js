@@ -79,6 +79,37 @@ const cainAchievements = {
         "Beast" : "445",
         "AllAchievements" : "261"
 }
+const judasAchievements = {
+        "Satan" : "72",
+        "BlueBaby" : "50",
+        "BossRush" : "108",
+        "Isaac" : "107",
+        "TheLamb" : "52",
+        "Heart" : "168",
+        "Hush" : "182",
+        "Greedier" : "299",
+        "MegaSatan" : "208",
+        "Delirium" : "285",
+        "Mother" : "447",
+        "Beast" : "448",
+        "AllAchievements" : "263"
+}
+const blueBabyAchievements = {
+    //TODO finir le truc
+        "Satan" : "48",
+        "BlueBaby" : "50",
+        "BossRush" : "108",
+        "Isaac" : "107",
+        "TheLamb" : "73",
+        "Heart" : "168",
+        "Hush" : "182",
+        "Greedier" : "299",
+        "MegaSatan" : "208",
+        "Delirium" : "285",
+        "Mother" : "447",
+        "Beast" : "448",
+        "AllAchievements" : "263"
+}
 const taintedIsaacAchievements = {
     "Satan" : "548",
     "BlueBaby" : "548",
@@ -339,8 +370,8 @@ const dataAllAchievements = {
     "isaac" :isaacAchievements,
     "magdalene" : magdaleneAchievements,
     "cain" : cainAchievements,
-    //judas : judasAchievements,
-    // ??? : blueBabyAchievements,
+    "judas" : judasAchievements,
+    // blueBaby : blueBabyAchievements,
     // eve : eveAchievements,
     // samson : samsonAchievements,
     // azazel : azazelAchievements,
