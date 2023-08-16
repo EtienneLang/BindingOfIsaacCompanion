@@ -1,5 +1,5 @@
 from steam import webapi, steamid
-from flask import Blueprint, render_template, request, redirect, session, current_app as app, jsonify, abort
+from flask import Blueprint, render_template, request, redirect, session, current_app as app, jsonify, abort, json
 
 bp_api = Blueprint('bp_api', __name__)
 

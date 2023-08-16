@@ -42,62 +42,75 @@ function creerAchievementCards() {
 }
 
 
-function afficherAchievements() {
-    const achievementsList = get_all_completed_achievements();
+async function afficherAchievements() {
+    const completedAchievementsList = await get_all_completed_achievements();
+    console.log(completedAchievementsList);
+    const arrayTest = Array.isArray(completedAchievementsList);
     let i = 0;
     let content ="";
     let allAchievementsDone = false;
+    const divCompletion = document.createElement("div");
     //Je devrais faire un switch ici, à faire plus tard
     for(let perso in dataAllAchievements){
-        if(achievementsList[i] === dataAllAchievements[perso]["AllAchievements"]) {
-            content += "all achievements";
-            allAchievementsDone = true;
-        }
-        else if(achievementsList[i] === dataAllAchievements[perso]["Satan"]) {
-            content += "satan";
-        }
-        else if(achievementsList[i] === dataAllAchievements[perso]["BlueBaby"]) {
-            content += "blue baby";
-        }
-        else if(achievementsList[i] === dataAllAchievements[perso]["BossRush"]) {
-            content += "boss rush";
-        }
-        else if(achievementsList[i] === dataAllAchievements[perso]["Isaac"]) {
-            content += "isaac";
-        }
-        else if(achievementsList[i] === dataAllAchievements[perso]["TheLamb"]) {
-            content += "the lamb";
-        }
-        else if(achievementsList[i] === dataAllAchievements[perso]["Heart"]) {
-            content += "heart";
-        }
-        else if(achievementsList[i] === dataAllAchievements[perso]["Hush"]) {
-            content += "hush";
-        }
-        else if(achievementsList[i] === dataAllAchievements[perso]["UltraGreedier"]) {
-            content += "ultra greedier";
-        }
-        else if (achievementsList[i] === dataAllAchievements[perso]["MegaSatan"]) {
-            content += "mega satan";
-        }
-        else if (achievementsList[i] === dataAllAchievements[perso]["Delirium"]) {
-            content += "delirium";
-        }
-        else if (achievementsList[i] === dataAllAchievements[perso]["Mother"]) {
-            content += "mother";
-        }
-        else if (achievementsList[i] === dataAllAchievements[perso]["Beast"]) {
-            content += "beast";
+        let allo = completedAchievementsList.length;
+        let allo2 = [1,2,3];
+        for(let i=0; i < completedAchievementsList; i++) {
+
+            //Si on a tous les achievements, on sort de la boucle
+            if(completedAchievementsList[i] === dataAllAchievements[perso]["AllAchievements"]) {
+                content += "all achievements";
+                allAchievementsDone = true;
+                break;
+            }
+            else if(completedAchievementsList[i] === dataAllAchievements[perso]["Satan"]) {
+                placeCompletionMark("Satan", divCompletion);
+            }
+            else if(completedAchievementsList[i] === dataAllAchievements[perso]["BlueBaby"]) {
+                placeCompletionMark("BlueBaby", divCompletion);
+            }
+            else if(completedAchievementsList[i] === dataAllAchievements[perso]["BossRush"]) {
+                placeCompletionMark("BossRush", divCompletion);
+            }
+            else if(completedAchievementsList[i] === dataAllAchievements[perso]["Isaac"]) {
+                placeCompletionMark("Isaac", divCompletion);
+            }
+            else if(completedAchievementsList[i] === dataAllAchievements[perso]["TheLamb"]) {
+                placeCompletionMark("TheLamb", divCompletion);
+            }
+            else if(completedAchievementsList[i] === dataAllAchievements[perso]["Heart"]) {
+                placeCompletionMark("Heart", divCompletion);
+            }
+            else if(completedAchievementsList[i] === dataAllAchievements[perso]["Hush"]) {
+                placeCompletionMark("Hush", divCompletion);
+            }
+            else if(completedAchievementsList[i] === dataAllAchievements[perso]["Greedier"]) {
+                placeCompletionMark("Greedier", divCompletion);
+            }
+            else if (completedAchievementsList[i] === dataAllAchievements[perso]["MegaSatan"]) {
+                placeCompletionMark("MegaSatan", divCompletion);
+            }
+            else if (completedAchievementsList[i] === dataAllAchievements[perso]["Delirium"]) {
+                placeCompletionMark("Delirium", divCompletion);
+            }
+            else if (completedAchievementsList[i] === dataAllAchievements[perso]["Mother"]) {
+                placeCompletionMark("Mother", divCompletion);
+            }
+            else if (completedAchievementsList[i] === dataAllAchievements[perso]["Beast"]) {
+                placeCompletionMark("Beast", divCompletion);
+            }
         }
     }
-}
-
-function placeCompletionMark() {
 
 }
 
+function placeCompletionMark(CharacterName, DivCompletion) {
+    const img = document.createElement("img");
+    img.src = `/static/images/AchievementSheet/Completion${CharacterName}.png`;
+    DivCompletion.append(img);
+}
 function get_all_completed_achievements() {
     controleur = new AbortController()
+
     try {
         const achievements = envoyerRequeteAjax(
             "/api/MyAchievements/get_all_completed_achievements",
