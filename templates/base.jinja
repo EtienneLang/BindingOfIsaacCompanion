@@ -20,16 +20,19 @@
                     </div>
                     <div class="collapse navbar-collapse " id="navbarColor01">
                         <div class="navbar-nav">
-                            {% if session and session.utilisateur %}
+                            {% if session and session.steam_id %}
                                 <li class="nav-item">
-                                    <a class="nav-item nav-link">My achievements</a>
+                                    <a class="nav-item nav-link" href="/api/{{ session.steam_id }}/MyAchievements">My achievements</a>
                                 </li>
                                 <li>
-                                    <a class="nav-item nav-link">Help me in my run!</a>
+                                    <a class="nav-item nav-link">Help me with my run!</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-item nav-link" href="/logout">Log out</a>
                                 </li>
                             {% else %}
                                 <li class="nav-item">
-                                    <a class="nav-item nav-link">Log in with steam</a>
+                                    <a class="nav-item nav-link" href="/steamAuth">Log in with steam</a>
                                 </li>
                             {% endif %}
                         </div>
