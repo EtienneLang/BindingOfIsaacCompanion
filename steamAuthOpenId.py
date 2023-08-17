@@ -27,9 +27,6 @@ def auth_with_steam():
     return redirect(auth_url)
 
 
-
-
-
 @bp_steamAuth.route("/authorize")
 def authorize():
     session.clear()

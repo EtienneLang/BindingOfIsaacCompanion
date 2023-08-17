@@ -9,4 +9,25 @@ main {
     width: 50px;
     height: 50px;
 }
+main{
+    background-image: url('/static/images/titlemenu_background.png');
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+.steam_button{
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(27,40,56,1) 50%, rgba(42,71,94,1) 100%);
+    transition: background 5s ease-out;
+
+}
+.steam_button a {
+    text-decoration: none;
+    width: 100px;
+    color: white;
+}
+.steam_button:hover{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(27,40,56,1) 0%, rgba(42,88,125,1) 99%);
+}
 /*# sourceMappingURL=styles.css.map */

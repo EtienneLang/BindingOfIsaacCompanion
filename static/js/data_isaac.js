@@ -14,7 +14,7 @@ const dicoTetePerso = {
         "HeadLilith": "/static/images/CharactersHeads/HeadLilith.png",
         "HeadKeeper": "/static/images/CharactersHeads/HeadKeeper.png",
         "HeadApollyon": "/static/images/CharactersHeads/HeadApollyon.png",
-        "HeadTheForgotten": "/static/images/CharactersHeads/HeadTheForgotten.png",
+        "HeadTheForgotten": "/static/images/CharactersHeads/HeadForgotten.png",
         "HeadJacob": "/static/images/CharactersHeads/HeadJacob.png",
         "HeadTaintedIsaac": "/static/images/CharactersHeads/HeadTaintedIsaac.png",
         "HeadTaintedMagdalene": "/static/images/CharactersHeads/HeadTaintedMagdalene.png",
