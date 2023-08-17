@@ -53,6 +53,8 @@ async function afficherAchievements() {
     let iteration = 0;
     for(let perso in dataAllAchievements){
         const divCompletion = document.createElement("div");
+        divCompletion.classList.add("row");
+        divCompletion.classList.add("text-center");
         let idCard = document.getElementById(`CompletionSheet_${iteration}`);
         for(let i=0; i < completedAchievementsList.length; i++) {
             //Si on a tous les achievements, on sort de la boucle
@@ -102,6 +104,8 @@ async function afficherAchievements() {
 function placeCompletionMark(CharacterName, DivCompletion) {
     const img = document.createElement("img");
     img.src = `/static/images/AchievementSheet/Completion${CharacterName}.png`;
+    img.classList.add("w-25");
+    img.classList.add("col-4-lg");
     DivCompletion.append(img);
 }
 function get_all_completed_achievements() {
