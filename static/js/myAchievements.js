@@ -28,13 +28,14 @@ function creerAchievementCards() {
         const cardBody = document.createElement("div");
         cardBody.classList.add("text-center");
         cardBody.classList.add("card-body");
+        cardBody.classList.add("p-4");
+
         cardBody.style = "background-image: url('/static/images/AchievementSheet/CompletionSheet.png'); " +
             "background-repeat: no-repeat; " +
             "background-position: center; " +
             "background-size:225px;";
         const sheetDiv = document.createElement("div");
         sheetDiv.style = "height: 250px; border-style: none;"
-        sheetDiv.classList.add("w-75");
         sheetDiv.id = `CompletionSheet_${i}`;
         cardBody.append(sheetDiv);
         card.append(cardBody);
@@ -54,7 +55,10 @@ async function afficherAchievements() {
     for(let perso in dataAllAchievements){
         const divCompletion = document.createElement("div");
         divCompletion.classList.add("row");
-        divCompletion.classList.add("text-center");
+        divCompletion.classList.add("p-5");
+        divCompletion.classList.add("d-flex");
+        divCompletion.classList.add("justify-content-center");
+        divCompletion.classList.add("align-items-center");
         let idCard = document.getElementById(`CompletionSheet_${iteration}`);
         for(let i=0; i < completedAchievementsList.length; i++) {
             //Si on a tous les achievements, on sort de la boucle
@@ -104,8 +108,7 @@ async function afficherAchievements() {
 function placeCompletionMark(CharacterName, DivCompletion) {
     const img = document.createElement("img");
     img.src = `/static/images/AchievementSheet/Completion${CharacterName}.png`;
-    img.classList.add("w-25");
-    img.classList.add("col-4-lg");
+    img.classList.add("col-lg-4");
     DivCompletion.append(img);
 }
 function get_all_completed_achievements() {
