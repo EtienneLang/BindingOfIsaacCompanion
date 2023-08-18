@@ -7,8 +7,8 @@
     <section class="text-center p-5">
         <h1>Binding of Isaac Companion</h1>
         <p>To have access to the companion, please enter your Steam/Profile ID bellow.</p>
-
-        <form>
+        {% if not session and not session.steam_id %}
+         <form>
             <label for="steamid-input" >STEAM ID :</label>
             <input type="text" id="steamid-input" name="steamid-input" placeholder="Steam Id...">
             <input type="button" id="steamid-button" value="Let's go">
@@ -19,8 +19,7 @@
             <a href="/steamAuth">Log in with steam</a>
             <img src="/static/images/steam-logo-black-transparent.png" alt="SteamLogo" class="steam_logo w-25">
         </div>
-
-
+        {% endif %}
     </section>
 
     <section>

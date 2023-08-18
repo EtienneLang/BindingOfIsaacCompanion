@@ -20,7 +20,6 @@ main{
     padding: 20px;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(27,40,56,1) 50%, rgba(42,71,94,1) 100%);
     transition: background 5s ease-out;
-
 }
 .steam_button a {
     text-decoration: none;

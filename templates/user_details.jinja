@@ -2,4 +2,10 @@
 {% block contenu %}
     <h1>Hello {{ player_name }} !</h1>
     <p>Unlocked Achievements : {{ achievements_completed }}</p>
+    <h2>
+        Latest Achievements unlocked :
+    </h2>
+    {% for i in latest_achievements %}
+        <img src="{{ i }}" alt="achievement{{ i }}">
+    {% endfor %}
 {% endblock %}
