@@ -1,7 +1,7 @@
 {% extends "base.jinja" %}
 {% block title %}BoI Companion{% endblock %}
 {% block scripts %}
-    <script src="/static/js/utils.js" defer></script>
+    <script src="/static/js/guide.js" defer></script>
 {% endblock %}
 {% block contenu %}
     <section id="mother_run" class="guide">
@@ -9,35 +9,36 @@
             Mother
         </h2>
         <form>
-            <div>
+            <div class="guide-checkmarks">
                 <label for="checkDownPour">Go to DownPour in the first or second floor</label>
                 <input type="checkbox" id="checkDownPour">
+                <img src="/static/images/GuideImages/door_downpourDoor.png" alt="downpourDoor">
             </div>
-            <div>
+            <div class="guide-checkmarks">
                 <label for="checkFirstKnifePiece">On DownPour's second floor, go in the mirror dimension and grab the first knife piece in the item room.</label>
                 <input type="checkbox" id="checkFirstKnifePiece">
             </div>
-            <div>
+            <div class="guide-checkmarks">
                 <label for="checkAshPit">Go to Ashpit after the DownPour second floor's boss</label>
                 <input type="checkbox" id="checkAshPit">
             </div>
-            <div>
+            <div class="guide-checkmarks">
                 <label for="checkSecondKnifePiece">On AshPit's second floor, click the three buttons and go take the second knife piece.(Remember you will have to lose two hearts to enter mausoleum)</label>
                 <input type="checkbox" id="checkSecondKnifePiece">
             </div>
-            <div>
+            <div class="guide-checkmarks">
                 <label for="checkMausoleum">Go to Mausoleum after AshPit second floor's boss</label>
                 <input type="checkbox" id="checkMausoleum">
             </div>
-            <div>
+            <div class="guide-checkmarks">
                 <label for="checkFleshWall">Beat mom on the second floor of mausoleum, DON'T DROP DOWN. Break the flesh door with the knife.</label>
                 <input type="checkbox" id="checkFleshWall">
             </div>
-            <div>
+            <div class="guide-checkmarks">
                 <label for="checkDownCorpse">Complete the corpse(nothing special to do in there)</label>
                 <input type="checkbox" id="checkDownCorpse">
             </div>
-            <div>
+            <div class="guide-checkmarks">
                 <label for="checkMother">Beat mother</label>
                 <input type="checkbox" id="checkMother">
             </div>

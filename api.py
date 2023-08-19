@@ -74,7 +74,7 @@ def get_all_steam_information(profileid):
         "user_details.jinja",
         achievements_completed=achievements_completed,
         player_name=player_information["response"]["players"][0]["personaname"],
-        latest_achievements = latest_achievements
+        latest_achievements=latest_achievements
     )
 
 
@@ -107,7 +107,7 @@ def guide():
 
 def get_latest_achievements(achievements, all_game_achievements, number_of_achievement_to_return):
     """Fonction pour récupérer les derniers achievements débloqués"""
-    sorted_achievements_player  = sorted(achievements["playerstats"]["achievements"], key=lambda k: k['unlocktime'], reverse=True)
+    sorted_achievements_player = sorted(achievements["playerstats"]["achievements"], key=lambda k: k['unlocktime'], reverse=True)
     i=0
     achievement_vector = []
     for achievement in range(number_of_achievement_to_return):
