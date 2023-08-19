@@ -100,6 +100,11 @@ def read_session():
         return []
 
 
+@bp_api.route("/guide")
+def guide():
+    return render_template("guide.jinja");
+
+
 def get_latest_achievements(achievements, all_game_achievements, number_of_achievement_to_return):
     """Fonction pour récupérer les derniers achievements débloqués"""
     sorted_achievements_player  = sorted(achievements["playerstats"]["achievements"], key=lambda k: k['unlocktime'], reverse=True)

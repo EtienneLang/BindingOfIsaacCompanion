@@ -29,4 +29,9 @@ main{
 .steam_button:hover{
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(27,40,56,1) 0%, rgba(42,88,125,1) 99%);
 }
+.guide{
+    background-color: grey;
+    opacity: 0.5;
+    padding: 10px;
+}
 /*# sourceMappingURL=styles.css.map */
