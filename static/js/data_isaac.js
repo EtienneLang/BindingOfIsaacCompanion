@@ -663,7 +663,20 @@ const dataMainProgression = {
     "635" : ["Defeat Mother", "A strange door (Path to The Beast)"]
 }
 
-const dataGoodItems= {
+const dataGoodItemsProgression = {
     //Structure du dictionnaire [Id de l'achievement'][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
     "29" : ["Defeat Isaac as BlueBaby", "The D6"],
+}
+
+const dataCharactersProgression = {
+    "1" : ["Have 7 or more Red Heart Containers at one time", "Magdalene"],
+    "2" : ["Hold 55 Coins at one time", "Cain"],
+    "3" : ["Defeat Satan", "Judas"],
+    "32" : ["Defeat Mom's Heart 10 times", "Blue Baby"],
+    "42" : ["Don't pick up any Hearts for 2 floors in a row", "Eve"],
+    "67" : ["Complete 2 floors in a row without taking damage", "Samson"],
+    "79" : ["Make 3 Deals with the Devil in one run", "Azazel"],
+    "80" : ["Have 4 or more Soul Hearts at one time", "Lazarus"],
+    "81" : ["Beat all Utero", "Eden"],
+    "82" : ["Die in a Sacrifice Room while holding Missing Poster", "The Lost"],
 }
