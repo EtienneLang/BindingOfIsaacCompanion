@@ -35,7 +35,35 @@ main{
     margin: 10px;
     border-radius: 10px;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:larger;
+    height: 75px;
 }
 
+#guideHeaders div{
+    background-color: #1a1a1a;
+    padding: 10px;
+    margin: 10px;
+    height: 100px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:xx-large;
+    opacity: 0.9;
+    transition: 0.2s ease-in;
+}
 
+#guideHeaders div:hover{
+    opacity: 1;
+}
+#guideHeaders div img{
+    height: 100%;
+}
+p {
+    margin-bottom: 0 !important;
+}
 /*# sourceMappingURL=styles.css.map */

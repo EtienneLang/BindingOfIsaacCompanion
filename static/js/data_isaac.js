@@ -583,15 +583,65 @@ const dataAllAchievements = {
 
 const dataTextGuide= {
     //Structure du dictionnaire : [Onglet du guide Cliqué][Numéro d'étape pour la chose à faire][0 = texte de l'étape, 1 = image de l'étape]
-
-    "mother" : {
+    "GuideSatan":{
+        "1" : ["Make your way to the Depths 2 floor, where you'll find the Mom boss fight. Defeat it and go down the trapdoor that appears.", ""],
+        "2" : ["Defeat Mom to unlock the trapdoor leading down to Utero.", ""],
+        "3" : ["Defeat Mom's Heart to unlock the trapdoor leading down to Sheol. Make sure to go in the trapdoor and NOT in the beam of light", ""],
+        "4" : ["Find the boss room in Sheol and defeat Satan", ""],
+    },
+    "GuideIsaac":{
+        "1" : ["Make your way to the Depths 2 floor, where you'll find the Mom boss fight. Defeat it and go down the trapdoor that appears.", ""],
+        "2" : ["Defeat Mom to unlock the trapdoor leading down to Utero.", ""],
+        "3" : ["Defeat Mom's Heart to unlock the trapdoor leading down to Cathedral. Make sure to go in the beam of light and NOT in the trapdoor", ""],
+        "4" : ["Find the boss room in Cathedral and defeat Isaac", ""],
+    },
+    "GuideBlueBaby":{
+        "1" : ["Make your way to the Depths 2 floor, where you'll find the Mom boss fight. Defeat it and go down the trapdoor that appears.", ""],
+        "2" : ["Defeat Mom to unlock the trapdoor leading down to Utero.", ""],
+        "3" : ["Defeat Mom's Heart to unlock the trapdoor leading down to Cathedral."],
+        "4" : ["After Mom's hearts, make sure to take the item at the right (The polaroid) and go in the beam of light, NOT in the trapdoor", ""],
+        "5" : ["Find the boss room in Cathedral and defeat Isaac", ""],
+        "6" : ["After Isaac, go in the trapdoor that appears and defeat ???", ""],
+    },
+    "GuideTheLamb":{
+        "1" : ["Make your way to the Depths 2 floor, where you'll find the Mom boss fight. Defeat it and go down the trapdoor that appears.", ""],
+        "2" : ["Defeat Mom to unlock the trapdoor leading down to Utero.", ""],
+        "3" : ["Defeat Mom's Heart to unlock the trapdoor leading down to Cathedral."],
+        "4" : ["After Mom's hearts, make sure to take the item at the right (The negative) and go in the trapdoor, NOT in the beam of light", ""],
+        "5" : ["Find the boss room in Sheol and defeat Satan", ""],
+        "6" : ["After Satan, go in the chest that appears and defeat find the boss room to defeat The Lamb", ""],
+    },
+    "GuideHush":{
+        "1" : ["Make your way to the Depths 2 floor, where you'll find the Mom boss fight. Defeat it and go down the trapdoor that appears.", ""],
+        "2" : ["Defeat Mom to unlock the trapdoor leading down to Utero.", ""],
+        "3" : ["Defeat Mom's Heart in less than 30 minutes", ""],
+        "4" : ["Go in the hole that has appeared on the wall.", ""],
+        "5" : ["Defeat Hush", ""],
+    },
+    "GuideBossRush":{
+        "1" : ["Make your way to the Depths 2 floor, where you'll find the Mom boss fight. Defeat it and go down the trapdoor that appears.", ""],
+        "2" : ["Defeat Mom under 20 minutes", ""],
+        "3" : ["Go in the hole that has appeared on the wall.", ""],
+        "4" : ["Take an item. Directly after that the boss rush will start. Defeat the 15 rounds of 2 bosses", ""],
+    },
+    "GuideMother" : {
         "1" : ["Go to DownPour in the first or second floor", "/static/images/GuideImages/door_downpourDoor.png"],
         "2" : ["On DownPour's second floor, go in the mirror dimension and grab the first knife piece in the item room.", "/static/images/GuideImages/MirrorDoor.png"],
         "3" : ["Go to Ashpit after the DownPour second floor's boss", "/static/images/GuideImages/MinesDoor.png"],
         "4" : ["On AshPit's second floor, click the three buttons and go take the second knife piece.(Remember you will have to lose two hearts to enter mausoleum)", ""],
-        "5" : ["Go to Mausoleum after AshPit second floor's boss", "/static/images/GuideImages/MausoleumDoor.png"],
+        "5" : ["Go to Mausoleum after AshPit second floor's boss", "/static/images/GuideImages/MusauleumDoor.png"],
         "6" : ["Beat mom on the second floor of mausoleum, DON'T DROP DOWN. Break the flesh door with the knife.", "/static/images/GuideImages/FleshDoor.png"],
         "7" : ["Complete the corpse and beat mother", ""]
+    },
+    "GuideBeast" : {
+        "1" : ["Drop one trinket in any treasure room or boss room during the floors before mom", ""],
+        "2" : ["Do a normal run until you arrive to the mom's floor", ""],
+        "3" : ["Search for a skull marked with an X and destroy it. Take the card and keep it until the boss fight."],
+        "4" : ["Beat mom and DO NOT GO DOWN. Take the Polaroid or the Negative and use the fool card.", ""],
+        "5" : ["Go to each treasure rooms through the ascension to find your cracked key (The trinket you dropped has transformed into a cracked key)", ""],
+        "6" : ["Complete the ascension and go Home", ""],
+        "7" : ["Before you go to sleep, use your key on the red room at the left wall under mom's bedroom", ""],
+        "8" : ["Take the item in the chest bellow mother's bed and sleep in her bed", ""],
+        "9" : ["Beat Dogma, all the mega sins and The Beast",""]
     }
-
 }

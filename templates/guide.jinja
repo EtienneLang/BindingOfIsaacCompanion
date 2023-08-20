@@ -1,91 +1,132 @@
 {% extends "base.jinja" %}
 {% block title %}BoI Companion{% endblock %}
 {% block scripts %}
+    <script src="/static/js/data_isaac.js" defer></script>
     <script src="/static/js/guide.js" defer></script>
 {% endblock %}
 {% block contenu %}
-    <section id="mother_run" class="guide">
-        <h2>
-            Mother
-        </h2>
-        <form>
-            <div class="guide-checkmarks">
-                <label for="checkDownPour">Go to DownPour in the first or second floor</label>
-                <input type="checkbox" id="checkDownPour">
-                <img src="/static/images/GuideImages/door_downpourDoor.png" alt="downpourDoor">
-            </div>
-            <div class="guide-checkmarks">
-                <label for="checkFirstKnifePiece">On DownPour's second floor, go in the mirror dimension and grab the first knife piece in the item room.</label>
-                <input type="checkbox" id="checkFirstKnifePiece">
-            </div>
-            <div class="guide-checkmarks">
-                <label for="checkAshPit">Go to Ashpit after the DownPour second floor's boss</label>
-                <input type="checkbox" id="checkAshPit">
-            </div>
-            <div class="guide-checkmarks">
-                <label for="checkSecondKnifePiece">On AshPit's second floor, click the three buttons and go take the second knife piece.(Remember you will have to lose two hearts to enter mausoleum)</label>
-                <input type="checkbox" id="checkSecondKnifePiece">
-            </div>
-            <div class="guide-checkmarks">
-                <label for="checkMausoleum">Go to Mausoleum after AshPit second floor's boss</label>
-                <input type="checkbox" id="checkMausoleum">
-            </div>
-            <div class="guide-checkmarks">
-                <label for="checkFleshWall">Beat mom on the second floor of mausoleum, DON'T DROP DOWN. Break the flesh door with the knife.</label>
-                <input type="checkbox" id="checkFleshWall">
-            </div>
-            <div class="guide-checkmarks">
-                <label for="checkDownCorpse">Complete the corpse(nothing special to do in there)</label>
-                <input type="checkbox" id="checkDownCorpse">
-            </div>
-            <div class="guide-checkmarks">
-                <label for="checkMother">Beat mother</label>
-                <input type="checkbox" id="checkMother">
-            </div>
-        </form>
+    <section id="guideHeaders">
+        <div id="GuideSatan">
+            <p>Satan</p>
+            <img src="/static/images/GuideImages/SatanBossGuide.png">
+        </div>
+        <div id="GuideIsaac">
+            <p>Isaac</p>
+            <img src="/static/images/GuideImages/IsaacBossGuide.png">
+        </div>
+        <div id="GuideBlueBaby">
+            <p>BlueBaby</p>
+            <img src="/static/images/GuideImages/BlueBabyBossGuide.png">
+        </div>
+        <div id="GuideTheLamb">
+            <p>The Lamb</p>
+            <img src="/static/images/GuideImages/TheLambBossGuide.png">
+        </div>
+        <div id="GuideHush">
+            <p>Hush</p>
+            <img src="/static/images/GuideImages/HushBossGuide.png">
+        </div>
+        <div id="GuideBossRush">
+            <p>BossRush</p>
+        </div>
+        <div>
+            <p>Delirium</p>
+            <img src="/static/images/GuideImages/DeliriumBossGuide.png">
+        </div>
+        <div id="GuideMother">
+            <p>Mother</p>
+            <img src="/static/images/GuideImages/MotherBossGuide.png">
+        </div>
+        <div id="GuideBeast">
+            <p>The Beast</p>
+            <img src="/static/images/GuideImages/BeastBossGuide.png">
+        </div>
     </section>
-    <section id="beast_run">
-        <h2>
-            Beast
-        </h2>
-        <form>
-            <div>
-                <label for="checkDownPour">Drop one trinket in any treasure room or boss room during the floors before mom</label>
-                <input type="checkbox" id="checkDownPour">
-            </div>
-            <div>
-                <label for="checkFirstKnifePiece">Do a normal run until you arrive to the mom's floor</label>
-                <input type="checkbox" id="checkFirstKnifePiece">
-            </div>
-            <div>
-                <label for="checkAshPit">Search for a skull marked with an X and destroy it. Take the card and keep it until the boss.</label>
-                <input type="checkbox" id="checkAshPit">
-            </div>
-            <div>
-                <label for="checkSecondKnifePiece">Beat mom and DO NOT GO DOWN.</label>
-                <input type="checkbox" id="checkSecondKnifePiece">
-            </div>
-            <div>
-                <label for="checkMausoleum">Use the fool card.</label>
-                <input type="checkbox" id="checkMausoleum">
-            </div>
-            <div>
-                <label for="checkFleshWall">Go to each treasure rooms through the ascension to find your cracked key</label>
-                <input type="checkbox" id="checkFleshWall">
-            </div>
-            <div>
-                <label for="checkDownCorpse">Complete the ascension and go Home</label>
-                <input type="checkbox" id="checkDownCorpse">
-            </div>
-            <div>
-                <label for="checkMother">Before you go to sleep, use your key on the red room at the left wall under mom's bedroom</label>
-                <input type="checkbox" id="checkMother">
-            </div>
-            <div>
-                <label for="checkMother">Beat Dogma, all the mega sins and The Beast</label>
-                <input type="checkbox" id="checkMother">
-            </div>
-        </form>
+    <section id="guideSteps" class="guide">
+
     </section>
+{#    <section id="mother_run" class="guide">#}
+{#        <h2>#}
+{#            Mother#}
+{#        </h2>#}
+{#        <form>#}
+{#            <div class="guide-checkmarks">#}
+{#                <label for="checkDownPour">Go to DownPour in the first or second floor</label>#}
+{#                <input type="checkbox" id="checkDownPour">#}
+{#                <img src="/static/images/GuideImages/door_downpourDoor.png" alt="downpourDoor">#}
+{#            </div>#}
+{#            <div class="guide-checkmarks">#}
+{#                <label for="checkFirstKnifePiece">On DownPour's second floor, go in the mirror dimension and grab the first knife piece in the item room.</label>#}
+{#                <input type="checkbox" id="checkFirstKnifePiece">#}
+{#            </div>#}
+{#            <div class="guide-checkmarks">#}
+{#                <label for="checkAshPit">Go to Ashpit after the DownPour second floor's boss</label>#}
+{#                <input type="checkbox" id="checkAshPit">#}
+{#            </div>#}
+{#            <div class="guide-checkmarks">#}
+{#                <label for="checkSecondKnifePiece">On AshPit's second floor, click the three buttons and go take the second knife piece.(Remember you will have to lose two hearts to enter mausoleum)</label>#}
+{#                <input type="checkbox" id="checkSecondKnifePiece">#}
+{#            </div>#}
+{#            <div class="guide-checkmarks">#}
+{#                <label for="checkMausoleum">Go to Mausoleum after AshPit second floor's boss</label>#}
+{#                <input type="checkbox" id="checkMausoleum">#}
+{#            </div>#}
+{#            <div class="guide-checkmarks">#}
+{#                <label for="checkFleshWall">Beat mom on the second floor of mausoleum, DON'T DROP DOWN. Break the flesh door with the knife.</label>#}
+{#                <input type="checkbox" id="checkFleshWall">#}
+{#            </div>#}
+{#            <div class="guide-checkmarks">#}
+{#                <label for="checkDownCorpse">Complete the corpse(nothing special to do in there)</label>#}
+{#                <input type="checkbox" id="checkDownCorpse">#}
+{#            </div>#}
+{#            <div class="guide-checkmarks">#}
+{#                <label for="checkMother">Beat mother</label>#}
+{#                <input type="checkbox" id="checkMother">#}
+{#            </div>#}
+{#        </form>#}
+{#    </section>#}
+{#    <section id="beast_run">#}
+{#        <h2>#}
+{#            Beast#}
+{#        </h2>#}
+{#        <form>#}
+{#            <div>#}
+{#                <label for="checkDownPour">Drop one trinket in any treasure room or boss room during the floors before mom</label>#}
+{#                <input type="checkbox" id="checkDownPour">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label for="checkFirstKnifePiece">Do a normal run until you arrive to the mom's floor</label>#}
+{#                <input type="checkbox" id="checkFirstKnifePiece">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label for="checkAshPit">Search for a skull marked with an X and destroy it. Take the card and keep it until the boss.</label>#}
+{#                <input type="checkbox" id="checkAshPit">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label for="checkSecondKnifePiece">Beat mom and DO NOT GO DOWN.</label>#}
+{#                <input type="checkbox" id="checkSecondKnifePiece">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label for="checkMausoleum">Use the fool card.</label>#}
+{#                <input type="checkbox" id="checkMausoleum">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label for="checkFleshWall">Go to each treasure rooms through the ascension to find your cracked key</label>#}
+{#                <input type="checkbox" id="checkFleshWall">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label for="checkDownCorpse">Complete the ascension and go Home</label>#}
+{#                <input type="checkbox" id="checkDownCorpse">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label for="checkMother">Before you go to sleep, use your key on the red room at the left wall under mom's bedroom</label>#}
+{#                <input type="checkbox" id="checkMother">#}
+{#            </div>#}
+{#            <div>#}
+{#                <label for="checkMother">Beat Dogma, all the mega sins and The Beast</label>#}
+{#                <input type="checkbox" id="checkMother">#}
+{#            </div>#}
+{#        </form>#}
+{#    </section>#}
 
 {% endblock %}
