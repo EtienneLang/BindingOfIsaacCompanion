@@ -645,3 +645,25 @@ const dataTextGuide= {
         "9" : ["Beat Dogma, all the mega sins and The Beast",""]
     }
 }
+
+const dataMainProgression = {
+    //Structure du dictionnaire [Id de l'achievement'][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
+    "4" : ["Defeat Mom", "The Womb"],
+    "139" : ["Defeat Mom's Heart 4 times", "Wire Coat Hanger"],
+    "11" : ["Defeat Mom's Heart 5 times", "Dr. Fetus"],
+    "140" : ["Defeat Mom's Heart 6 times", "Ipecac"],
+    "35" : ["Defeat Mom's Heart 7 times", "Experimental Treatment"],
+    "234" : ["Defeat Mom's Heart 10 times", "Blue Womb"],
+    "34" : ["Defeat Mom's Heart 11 times", "It Lives!"],
+    "43" : ["Defeat Satan as Isaac", "Mom's Knife (And Judas if it's your first time beating satan)"],
+    "44" : ["Defeat Isaac 5 times", "The Polaroid"],
+    "78" : ["Defeat Satan 5 times", "The Negative"],
+    "320" : ["Defeat Hush", "New Area (The void for Delirium)"],
+    "407" : ["Beat Hust 3 times", "A Secret Ending (Path to mother)"],
+    "635" : ["Defeat Mother", "A strange door (Path to The Beast)"]
+}
+
+const dataGoodItems= {
+    //Structure du dictionnaire [Id de l'achievement'][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
+    "29" : ["Defeat Isaac as BlueBaby", "The D6"],
+}
