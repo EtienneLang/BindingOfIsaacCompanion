@@ -2,6 +2,7 @@
 const guideHeadersChildren = document.getElementById("guideHeaders").children;
 const guideHeaders = document.getElementById("guideHeaders");
 const guideStepsSection = document.getElementById("guideSteps");
+const BackButton = document.getElementById("backButton");
 function loadGuide(event) {
     guideHeaders.classList.add("d-none");
     const backButton = document.createElement("div");
@@ -9,14 +10,18 @@ function loadGuide(event) {
     backButton.classList.add("btn-primary");
     backButton.classList.add("btn-lg");
     backButton.innerHTML = "Back";
-    guideStepsSection.append(backButton);
+    BackButton.append(backButton);
     backButton.addEventListener("click", function () {
         guideHeaders.classList.remove("d-none");
         guideStepsSection.innerHTML = "";
+        backButton.remove();
     })
     for (const steps in dataTextGuide[event.target.id]) {
         let div = document.createElement("div");
+        div.classList.add("stretched-link");
         div.classList.add("guide-checkmarks");
+        div.id = steps;
+        div.addEventListener("click", gererClick);
         let p = document.createElement("p");
         p.innerHTML = dataTextGuide[event.target.id][steps][0];
         let img = document.createElement("img");
@@ -24,6 +29,15 @@ function loadGuide(event) {
         div.append(p);
         div.append(img);
         guideStepsSection.append(div);
+    }
+}
+
+function gererClick(event) {
+    if (document.getElementById(event.target.id).classList.contains("checked")) {
+        document.getElementById(event.target.id).classList.remove("checked");
+    }
+    else {
+        document.getElementById(event.target.id).classList.add("checked");
     }
 }
 function initialisation() {

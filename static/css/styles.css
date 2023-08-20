@@ -55,6 +55,7 @@ main{
     font-size:xx-large;
     opacity: 0.9;
     transition: 0.2s ease-in;
+    transform: rotate(0);
 }
 
 #guideHeaders div:hover{
@@ -66,4 +67,12 @@ main{
 p {
     margin-bottom: 0 !important;
 }
+.guide-checkmarks{
+    /*Utile pour le stretch-link*/
+    transform: rotate(0);
+}
+.checked{
+    opacity: 0.4;
+}
+
 /*# sourceMappingURL=styles.css.map */
