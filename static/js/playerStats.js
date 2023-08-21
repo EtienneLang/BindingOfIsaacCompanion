@@ -38,6 +38,7 @@ async function createDicoMainStats() {
             }
         }
     }
+
     for (const achievement in dataMainProgressionNotDone) {
         dataMainProgressionNotDone[achievement][2] = allGameAchievements["game"]["availableGameStats"]["achievements"][achievement-1]["icon"];
     }
@@ -46,22 +47,38 @@ async function createDicoMainStats() {
 
 async function afficherMainProgressionNotDone() {
     const dataMainProgressionNotDone = await createDicoMainStats();
+    //Load à partir de la session, va falloir faire un truc pour que quand on met le steam
+    //id dans la barre de recherche, ça mette à jour la session
     for (const achievement in dataMainProgressionNotDone) {
-        const div = document.createElement("div");
-        div.classList.add("col-6");
-        div.classList.add("col-md-4");
-        div.classList.add("col-lg-3");
-        div.classList.add("col-xl-2");
-        div.classList.add("text-center");
-        div.classList.add("mb-4");
+        const div1 = document.createElement("div");
+        div1.classList.add("cardAchievement");
+        div1.classList.add("card");
+        div1.classList.add("text-white");
+        div1.classList.add("bg-primary");
+        div1.classList.add("m-3");
+        div1.classList.add("text-center");
+        const div2 = document.createElement("div");
+        const pTitle = document.createElement("p");
+        pTitle.innerHTML = dataMainProgressionNotDone[achievement][1];
+        div2.append(pTitle);
+        div2.classList.add("card-header");
+        div1.append(div2);
+        const div3 = document.createElement("div");
+        div3.classList.add("card-body");
         const img = document.createElement("img");
         img.classList.add("img-fluid");
         img.src = dataMainProgressionNotDone[achievement][2];
         const p = document.createElement("p");
+        p.classList.add("mt-2");
         p.innerHTML = dataMainProgressionNotDone[achievement][0];
-        div.append(img);
-        div.append(p);
-        divStatsAchievements.append(div);
+        const pHref = document.createElement("a");
+        pHref.href = "http://127.0.0.1:5000/api/guide";
+        pHref.innerHTML = "How?";
+        div3.append(img);
+        div3.append(p);
+        div3.append(pHref);
+        div1.append(div3);
+        divStatsAchievements.append(div1);
     }
 }
 async function initialisation() {

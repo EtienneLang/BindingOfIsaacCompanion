@@ -88,4 +88,14 @@ p {
   opacity: 0.4;
 }
 
+.cardAchievement {
+  width: 15%;
+}
+.cardAchievement img {
+  width: 100px;
+}
+.cardAchievement a {
+  color: white;
+}
+
 /*# sourceMappingURL=styles.css.map */
