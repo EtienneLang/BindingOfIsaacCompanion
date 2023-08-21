@@ -649,6 +649,7 @@ const dataTextGuide= {
 const dataMainProgression = {
     //Structure du dictionnaire [Id de l'achievement'][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
     "4" : ["Defeat Mom", "The Womb"],
+    "150" : ["Defeat Mom's Heart 2 times", "Rubber Cement"],
     "139" : ["Defeat Mom's Heart 4 times", "Wire Coat Hanger"],
     "11" : ["Defeat Mom's Heart 5 times", "Dr. Fetus"],
     "140" : ["Defeat Mom's Heart 6 times", "Ipecac"],
@@ -666,9 +667,13 @@ const dataMainProgression = {
 const dataGoodItemsProgression = {
     //Structure du dictionnaire [Id de l'achievement'][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
     "29" : ["Defeat Isaac as BlueBaby", "The D6"],
+    "103": ["Complete Waka Waka challenge", "Death's Touch"],
+    "112": ["Complete Bush Rush as Eve", "Eve's Mascara"],
+    "52" : ["Defeat The Lamb as Judas", "Curved Horn"],
 }
 
 const dataCharactersProgression = {
+    //Structure du dictionnaire [Id de l'achievement][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
     "1" : ["Have 7 or more Red Heart Containers at one time", "Magdalene"],
     "2" : ["Hold 55 Coins at one time", "Cain"],
     "3" : ["Defeat Satan", "Judas"],
@@ -679,4 +684,10 @@ const dataCharactersProgression = {
     "80" : ["Have 4 or more Soul Hearts at one time", "Lazarus"],
     "81" : ["Beat all Utero", "Eden"],
     "82" : ["Die in a Sacrifice Room while holding Missing Poster", "The Lost"],
+    "199" : ["Defeat Ultra Greed with Azazel", "Lilith"],
+    "251" :  ["Donate 1000 coins to the Greed Machine", "Keeper"],
+    "340" : ["Defeat Mega Satan", "Apollyon"],
+    //Fuck The forgotten
+    "404" : ["Beat Hard mode as Lazarus without losing a life", "Bethany"],
+    "405" : ["Beat Mother", "Jacob and Esau"],
 }

@@ -26,10 +26,13 @@ def get_player_information(steam_id):
     return steam_api.call("ISteamUser.GetPlayerSummaries", steamids=steam_id)
 
 
-def get_game_information(steam_id):
+@bp_api.route("/get_all_game_achievements", methods=["GET"])
+def get_game_information():
     return steam_api.call("ISteamUserStats.GetSchemaForGame",
                          appid=250900,
                          l="en")
+
+
 
 
 def get_player_games(steam_id):
@@ -61,9 +64,10 @@ def get_all_steam_information(profileid):
     achievements_completed = 0
     steam_id = get_steam_id(profileid)
     achievements = get_achievements(steam_id)
+    session["steam_id"] = steam_id
     player_information = get_player_information(steam_id)
     player_has_isaac = does_player_has_isaac(steam_id)
-    all_game_achievements = get_game_information(steam_id)
+    all_game_achievements = get_game_information()
     if player_has_isaac:
         for achievement in achievements["playerstats"]["achievements"]:
             if achievement["achieved"] == 1:
@@ -97,12 +101,13 @@ def read_session():
     if "achievements" in session:
         return session["achievements"]
     else:
-        return []
+        if "steam_id" in session:
+            return load_all_player_achievements(session["steam_id"])
 
 
 @bp_api.route("/guide")
 def guide():
-    return render_template("guide.jinja");
+    return render_template("guide.jinja")
 
 
 def get_latest_achievements(achievements, all_game_achievements, number_of_achievement_to_return):
