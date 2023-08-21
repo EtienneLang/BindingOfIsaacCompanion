@@ -56,3 +56,35 @@ async function envoyerRequeteAjax(
 
     return await reponse.json();
 }
+
+function get_all_completed_achievements() {
+    controleur = new AbortController()
+
+    try {
+        const achievements = envoyerRequeteAjax(
+            "/api/MyAchievements/get_all_completed_achievements",
+            "GET",
+            null,
+            controleur);
+
+        return achievements;
+    } catch (error) {
+        console.log(error);
+    }
+}
+function getAllGameAchievement() {
+
+    controleur = new AbortController()
+
+    try {
+        const achievements = envoyerRequeteAjax(
+            "/api/get_all_game_achievements",
+            "GET",
+            null,
+            controleur);
+
+        return achievements;
+    } catch (error) {
+        console.log(error);
+    }
+}

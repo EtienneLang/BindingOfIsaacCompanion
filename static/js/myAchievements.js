@@ -111,21 +111,7 @@ function placeCompletionMark(CharacterName, DivCompletion) {
     img.classList.add("col-lg-4");
     DivCompletion.append(img);
 }
-function get_all_completed_achievements() {
-    controleur = new AbortController()
 
-    try {
-        const achievements = envoyerRequeteAjax(
-            "/api/MyAchievements/get_all_completed_achievements",
-            "GET",
-            null,
-            controleur);
-
-        return achievements;
-    } catch (error) {
-        console.log(error);
-    }
-}
 async function initialisation() {
 
 }

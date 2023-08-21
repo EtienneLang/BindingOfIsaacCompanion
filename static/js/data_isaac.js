@@ -657,7 +657,7 @@ const dataMainProgression = {
     "234" : ["Defeat Mom's Heart 10 times", "Blue Womb"],
     "34" : ["Defeat Mom's Heart 11 times", "It Lives!"],
     "43" : ["Defeat Satan as Isaac", "Mom's Knife (And Judas if it's your first time beating satan)"],
-    "44" : ["Defeat Isaac 5 times", "The Polaroid"],
+    "57" : ["Defeat Isaac 5 times", "The Polaroid"],
     "78" : ["Defeat Satan 5 times", "The Negative"],
     "320" : ["Defeat Hush", "New Area (The void for Delirium)"],
     "407" : ["Beat Hust 3 times", "A Secret Ending (Path to mother)"],

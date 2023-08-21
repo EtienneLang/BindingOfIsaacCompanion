@@ -113,7 +113,7 @@ def guide():
 def get_latest_achievements(achievements, all_game_achievements, number_of_achievement_to_return):
     """Fonction pour récupérer les derniers achievements débloqués"""
     sorted_achievements_player = sorted(achievements["playerstats"]["achievements"], key=lambda k: k['unlocktime'], reverse=True)
-    i=0
+    i = 0
     achievement_vector = []
     for achievement in range(number_of_achievement_to_return):
         achievement_vector.append(all_game_achievements["game"]["availableGameStats"]["achievements"][int(sorted_achievements_player[i]["apiname"])-1]["icon"])
