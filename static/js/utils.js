@@ -34,6 +34,7 @@ function steamIdToURL() {
 }
 
 
+
 async function initialisation() {
     steamIdButton.addEventListener('click', steamIdToURL);
 }

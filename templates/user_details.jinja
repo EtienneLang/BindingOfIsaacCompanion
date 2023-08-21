@@ -1,4 +1,9 @@
 {% extends "base.jinja" %}
+{% block scripts %}
+    <script src="/static/js/data_isaac.js"></script>
+    <script src="/static/js/utils-ajax.js"></script>
+    <script src="/static/js/playerStats.js" defer></script>
+{% endblock %}
 {% block contenu %}
     <h1>Hello {{ player_name }} !</h1>
     <p>Unlocked Achievements : {{ achievements_completed }}</p>
@@ -8,4 +13,15 @@
     {% for i in latest_achievements %}
         <img src="{{ i }}" alt="achievement{{ i }}">
     {% endfor %}
+    <ul class="nav nav-tabs">
+        <li class="nav-item" id="main-stats">
+            Main Achievements
+        </li>
+        <li class="nav-item" id="characters-stats">
+            Characters
+        </li>
+        <li class="nav-item" id="items-stats">
+            Items
+        </li>
+    </ul>
 {% endblock %}
