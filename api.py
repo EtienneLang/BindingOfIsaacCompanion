@@ -78,6 +78,7 @@ def get_all_steam_information(profileid):
         "user_details.jinja",
         achievements_completed=achievements_completed,
         player_name=player_information["response"]["players"][0]["personaname"],
+        profile_pic = player_information["response"]["players"][0]["avatarfull"],
         latest_achievements=latest_achievements
     )
 

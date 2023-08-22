@@ -670,6 +670,16 @@ const dataGoodItemsProgression = {
     "103": ["Complete Waka Waka challenge", "Death's Touch"],
     "112": ["Complete Bush Rush as Eve", "Eve's Mascara"],
     "52" : ["Defeat The Lamb as Judas", "Curved Horn"],
+    "62" : ["Complete The Family man challenge", "Epic Fetus"],
+    "156" : ["Earn all completion mark with the lost", "Godhead"],
+    "138" : ["Donate 999 coins to the donation machine", "Stop Watch"],
+    "190" : ["Defeat Hush with Lilith", "Incubus"],
+    "377" : ["Acquire Blood Clot 10 times", "Haemolacria"],
+    "463" : ["Defeat The Beast as Lilith", "C Section"],
+    "470" : ["Defeat Mother as Bethany", "Revelation"],
+    "491" : ["Defeat The Beast as Tainted Isaac", "Glitched Crown"],
+    "501" : ["Defeat The Beast as Tainted Lost", "Sacred Orb"],
+    "502" : ["Defeat The Beast as Tainted Lilith", "Twisted Pair"]
 }
 
 const dataCharactersProgression = {
