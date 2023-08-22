@@ -98,4 +98,14 @@ p {
   color: white;
 }
 
+.nav-achievement-progress {
+  margin: 0 auto;
+}
+.nav-achievement-progress div {
+  width: 300px;
+  padding: 20px;
+  background: black;
+  color: white;
+}
+
 /*# sourceMappingURL=styles.css.map */

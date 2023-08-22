@@ -4,52 +4,75 @@ const buttonMainStats = document.getElementById("main-stats");
 const buttonCharactersStats = document.getElementById("characters-stats");
 const buttonItemsStats = document.getElementById("items-stats");
 const divStatsAchievements = document.getElementById("stats-achievements");
-const vectMainProgression = [];
+
 
 let controleur = null;
 
-function gererClickMenu(event) {
+async function gererClickMenu(event) {
+    divStatsAchievements.innerHTML = "";
     if (event.target.id === "main-stats") {
-        buttonMainStats.classList.add("active");
-        buttonCharactersStats.classList.remove("active");
-        buttonItemsStats.classList.remove("active");
+        await afficherMainProgressionNotDone();
     }
     else if (event.target.id === "characters-stats") {
-        buttonMainStats.classList.remove("active");
-        buttonCharactersStats.classList.add("active");
-        buttonItemsStats.classList.remove("active");
+        await afficherCharactersProgressionNotDone();
     }
     else if (event.target.id === "items-stats") {
-        buttonMainStats.classList.remove("active");
-        buttonCharactersStats.classList.remove("active");
-        buttonItemsStats.classList.add("active");
+        await afficherGoodItemsProgressionNotDone();
     }
 }
 
-async function createDicoMainStats() {
-    const dataMainProgressionNotDone = dataMainProgression;
+
+async function createDicoStats(dataProgression) {
+    //Load à partir de la session, va falloir faire un truc pour que quand on met le steam
+    //id dans la barre de recherche, ça mette à jour la session
+    const dataMainProgressionNotDone = dataProgression;
     const allGameAchievements = await getAllGameAchievement();
     const completedAchievementsList = await get_all_completed_achievements();
-    for (const achievement in dataMainProgression) {
-        for (let i=0; i < completedAchievementsList.length; i++){
-            if(achievement === completedAchievementsList[i]){
+    for (const achievement in dataProgression) {
+        for (let i = 0; i < completedAchievementsList.length; i++) {
+            if (achievement === completedAchievementsList[i]) {
                 delete dataMainProgressionNotDone[achievement];
                 break;
             }
         }
     }
-
     for (const achievement in dataMainProgressionNotDone) {
-        dataMainProgressionNotDone[achievement][2] = allGameAchievements["game"]["availableGameStats"]["achievements"][achievement-1]["icon"];
+        dataMainProgressionNotDone[achievement][2] = allGameAchievements["game"]["availableGameStats"]["achievements"][achievement - 1]["icon"];
     }
-    return dataMainProgressionNotDone
+    return dataMainProgressionNotDone;
+}
+// On peut faire juste une fonction qui prend en paramètre le dico à afficher
+async function afficherMainProgressionNotDone() {
+    const dataMainProgressionNotDone = await createDicoStats(dataMainProgression);
+    afficherCardsAchievementProgression(dataMainProgressionNotDone);
+}
+async function afficherCharactersProgressionNotDone() {
+        const dataCharactersProgressionNotDone = await createDicoStats(dataCharactersProgression);
+        afficherCardsAchievementProgression(dataCharactersProgressionNotDone);
 }
 
-async function afficherMainProgressionNotDone() {
-    const dataMainProgressionNotDone = await createDicoMainStats();
-    //Load à partir de la session, va falloir faire un truc pour que quand on met le steam
-    //id dans la barre de recherche, ça mette à jour la session
-    for (const achievement in dataMainProgressionNotDone) {
+async function afficherGoodItemsProgressionNotDone() {
+    const dataGoodItemsProgressionNotDone = await createDicoStats(dataGoodItemsProgression);
+    afficherCardsAchievementProgression(dataGoodItemsProgressionNotDone);
+
+}
+
+
+
+function afficherCardsAchievementProgression(dataProgression) {
+    if (Object.entries(dataProgression).length === 0) {
+        const div = document.createElement("div");
+        div.classList.add("text-center");
+        const h3 = document.createElement("h3");
+        h3.innerHTML = "You have completed all of the achievements of this category, nice job!";
+        const img = document.createElement("img");
+        img.src="/static/images/isaacDanceFiles.gif";
+        div.append(h3);
+        div.append(img);
+        divStatsAchievements.append(div);
+        return;
+    }
+    for (const achievement in dataProgression) {
         const div1 = document.createElement("div");
         div1.classList.add("cardAchievement");
         div1.classList.add("card");
@@ -59,7 +82,7 @@ async function afficherMainProgressionNotDone() {
         div1.classList.add("text-center");
         const div2 = document.createElement("div");
         const pTitle = document.createElement("p");
-        pTitle.innerHTML = dataMainProgressionNotDone[achievement][1];
+        pTitle.innerHTML = dataProgression[achievement][1];
         div2.append(pTitle);
         div2.classList.add("card-header");
         div1.append(div2);
@@ -67,10 +90,10 @@ async function afficherMainProgressionNotDone() {
         div3.classList.add("card-body");
         const img = document.createElement("img");
         img.classList.add("img-fluid");
-        img.src = dataMainProgressionNotDone[achievement][2];
+        img.src = dataProgression[achievement][2];
         const p = document.createElement("p");
         p.classList.add("mt-2");
-        p.innerHTML = dataMainProgressionNotDone[achievement][0];
+        p.innerHTML = dataProgression[achievement][0];
         const pHref = document.createElement("a");
         pHref.href = "http://127.0.0.1:5000/api/guide";
         pHref.innerHTML = "How?";
@@ -88,4 +111,3 @@ async function initialisation() {
 }
 
 window.addEventListener('load', initialisation);
-window.addEventListener('load', afficherMainProgressionNotDone);

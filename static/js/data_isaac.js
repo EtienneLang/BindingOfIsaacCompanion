@@ -647,7 +647,7 @@ const dataTextGuide= {
 }
 
 const dataMainProgression = {
-    //Structure du dictionnaire [Id de l'achievement'][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
+    //Structure du dictionnaire [Id de l'achievement][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
     "4" : ["Defeat Mom", "The Womb"],
     "150" : ["Defeat Mom's Heart 2 times", "Rubber Cement"],
     "139" : ["Defeat Mom's Heart 4 times", "Wire Coat Hanger"],
@@ -665,7 +665,7 @@ const dataMainProgression = {
 }
 
 const dataGoodItemsProgression = {
-    //Structure du dictionnaire [Id de l'achievement'][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
+    //Structure du dictionnaire [Id de l'achievement][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
     "29" : ["Defeat Isaac as BlueBaby", "The D6"],
     "103": ["Complete Waka Waka challenge", "Death's Touch"],
     "112": ["Complete Bush Rush as Eve", "Eve's Mascara"],

@@ -1,7 +1,7 @@
 {% extends "base.jinja" %}
 {% block scripts %}
-    <script src="/static/js/data_isaac.js"></script>
-    <script src="/static/js/utils-ajax.js"></script>
+    <script src="/static/js/data_isaac.js" defer></script>
+    <script src="/static/js/utils-ajax.js" defer></script>
     <script src="/static/js/playerStats.js" defer></script>
 {% endblock %}
 {% block contenu %}
@@ -13,17 +13,17 @@
     {% for i in latest_achievements %}
         <img src="{{ i }}" alt="achievement{{ i }}">
     {% endfor %}
-    <ul class="nav nav-tabs">
-        <li class="nav-item" id="main-stats">
+    <div class="d-flex justify-content-around nav-achievement-progress mt-3 mb-3">
+        <div id="main-stats">
             Main Achievements
-        </li>
-        <li class="nav-item" id="characters-stats">
+        </div>
+        <div id="characters-stats">
             Characters
-        </li>
-        <li class="nav-item" id="items-stats">
+        </div>
+        <div id="items-stats">
             Items
-        </li>
-    </ul>
+        </div>
+    </div>
     <div id="stats-achievements" class="d-flex justify-content-center">
 
     </div>

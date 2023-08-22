@@ -17,7 +17,7 @@ function creerAchievementCards() {
         // Entête de la carte
         const icone = document.createElement("div");
         icone.classList.add("text-center");
-        icone.classList.add("card-header")
+        icone.classList.add("card-header");
         const image = document.createElement("img");
         image.src = dicoTetePerso[perso];
         image.classList.add("w-25");
@@ -39,7 +39,6 @@ function creerAchievementCards() {
         sheetDiv.id = `CompletionSheet_${i}`;
         cardBody.append(sheetDiv);
         card.append(cardBody);
-
         myAchievementsSection.append(card);
         i++;
     }
