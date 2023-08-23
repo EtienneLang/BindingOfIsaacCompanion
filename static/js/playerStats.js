@@ -37,7 +37,12 @@ async function createDicoStats(dataProgression) {
         }
     }
     for (const achievement in dataMainProgressionNotDone) {
-        dataMainProgressionNotDone[achievement][2] = allGameAchievements["game"]["availableGameStats"]["achievements"][achievement - 1]["icon"];
+        for (let i in allGameAchievements["game"]["availableGameStats"]["achievements"]) {
+            if (achievement === allGameAchievements["game"]["availableGameStats"]["achievements"][i]["name"]){
+                dataMainProgressionNotDone[achievement][2] = allGameAchievements["game"]["availableGameStats"]["achievements"][i]["icon"];
+            }
+        }
+
     }
     return dataMainProgressionNotDone;
 }
@@ -74,6 +79,7 @@ function afficherCardsAchievementProgression(dataProgression) {
     }
     for (const achievement in dataProgression) {
         const div1 = document.createElement("div");
+        div1.classList.add("rounded-2")
         div1.classList.add("col-xl-3");
         div1.classList.add("col-lg-4");
         div1.classList.add("col-md-6");
@@ -92,6 +98,7 @@ function afficherCardsAchievementProgression(dataProgression) {
         const div3 = document.createElement("div");
         div3.classList.add("card-body");
         const img = document.createElement("img");
+        img.classList.add("rounded-3");
         img.classList.add("img-fluid");
         img.src = dataProgression[achievement][2];
         const p = document.createElement("p");

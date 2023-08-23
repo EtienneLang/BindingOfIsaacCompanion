@@ -5,14 +5,23 @@
     <script src="/static/js/playerStats.js" defer></script>
 {% endblock %}
 {% block contenu %}
-    <h1>Hello {{ player_name }} !</h1>
-    <p>Unlocked Achievements : {{ achievements_completed }}</p>
-    <h2>
-        Latest Achievements unlocked :
-    </h2>
-    {% for i in latest_achievements %}
-        <img src="{{ i }}" alt="achievement{{ i }}">
-    {% endfor %}
+    <div class="text-center">
+        <h1>Hello {{ player_name }} !</h1>
+        <img src="{{ profile_pic }}" class="border border-dark">
+        <p class="mt-4">Achievements Unlocked : {{ achievements_completed }}</p>
+    </div>
+    <div class="m-5">
+        <h2 class="text-center">
+            Latest Achievements unlocked
+        </h2>
+        <div class="row justify-content-md-center">
+        {% for i in latest_achievements %}
+            <img src="{{ i }}" alt="achievement{{ i }}" class="col-1 p-2">
+        {% endfor %}
+        </div>
+    </div>
+
+
     <div class="d-flex justify-content-around nav-achievement-progress mt-3 mb-3">
         <div id="main-stats">
             Main Achievements
@@ -25,7 +34,7 @@
         </div>
     </div>
 
-    <div id="stats-achievements" class="row">
+    <div id="stats-achievements" class="row justify-content-md-center">
 
     </div>
 

@@ -78,7 +78,7 @@ def get_all_steam_information(profileid):
         "user_details.jinja",
         achievements_completed=achievements_completed,
         player_name=player_information["response"]["players"][0]["personaname"],
-        profile_pic = player_information["response"]["players"][0]["avatarfull"],
+        profile_pic=player_information["response"]["players"][0]["avatarfull"],
         latest_achievements=latest_achievements
     )
 
@@ -114,10 +114,10 @@ def guide():
 def get_latest_achievements(achievements, all_game_achievements, number_of_achievement_to_return):
     """Fonction pour récupérer les derniers achievements débloqués"""
     sorted_achievements_player = sorted(achievements["playerstats"]["achievements"], key=lambda k: k['unlocktime'], reverse=True)
-    i = 0
     achievement_vector = []
-    #On doit comparer le achievements au "name" dans le dico all_game_achievements, on va donc devoir faire une boucle ! yes...
-    for achievement in range(number_of_achievement_to_return):
-        achievement_vector.append(all_game_achievements["game"]["availableGameStats"]["achievements"][int(sorted_achievements_player[i]["apiname"])-1]["icon"])
-        i += 1
+    for x in range(number_of_achievement_to_return):
+        for model_achievement in all_game_achievements["game"]["availableGameStats"]["achievements"]:
+            if sorted_achievements_player[x]["apiname"] == model_achievement["name"]:
+                achievement_vector.append(model_achievement["icon"])
+                break
     return achievement_vector
