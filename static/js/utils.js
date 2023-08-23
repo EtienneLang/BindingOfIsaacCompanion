@@ -26,7 +26,7 @@ function steamIdToURL() {
     // }
 
     if (valide){
-        location.replace("http://127.0.0.1:5000/api/" + steamIdInput.value);
+        location.replace("/api/" + steamIdInput.value);
     }
     else{
         steamIdInput.className = "is-invalid";

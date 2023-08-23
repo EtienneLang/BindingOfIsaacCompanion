@@ -90,7 +90,7 @@ async function afficherNextAchievement() {
     p.classList.add("mt-2");
     p.innerHTML = dataMainProgressionNotDone[0][0];
     const pHref = document.createElement("a");
-    pHref.href = "http://127.0.0.1:5000/api/guide";
+    pHref.href = window.href + "/api/guide";
     pHref.innerHTML = "How?";
     div3.append(img);
     div3.append(p);
