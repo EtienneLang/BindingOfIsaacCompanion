@@ -4,7 +4,7 @@ const buttonMainStats = document.getElementById("main-stats");
 const buttonCharactersStats = document.getElementById("characters-stats");
 const buttonItemsStats = document.getElementById("items-stats");
 const divStatsAchievements = document.getElementById("stats-achievements");
-
+const divNextAchievement = document.getElementById("next-unlock");
 
 let controleur = null;
 
@@ -63,6 +63,41 @@ async function afficherGoodItemsProgressionNotDone() {
 }
 
 
+//NE MARCHE PAS, A REGLER
+async function afficherNextAchievement() {
+    const dataMainProgressionNotDone = await createDicoStats(dataMainProgression);
+    const div1 = document.createElement("div");
+    div1.classList.add("rounded-2")
+    div1.classList.add("cardAchievement");
+    div1.classList.add("card");
+    div1.classList.add("text-white");
+    div1.classList.add("bg-primary");
+    div1.classList.add("m-3");
+    div1.classList.add("text-center");
+    const div2 = document.createElement("div");
+    const pTitle = document.createElement("p");
+    pTitle.innerHTML = dataMainProgressionNotDone[0][1];
+    div2.append(pTitle);
+    div2.classList.add("card-header");
+    div1.append(div2);
+    const div3 = document.createElement("div");
+    div3.classList.add("card-body");
+    const img = document.createElement("img");
+    img.classList.add("rounded-3");
+    img.classList.add("img-fluid");
+    img.src = dataMainProgressionNotDone[0][2];
+    const p = document.createElement("p");
+    p.classList.add("mt-2");
+    p.innerHTML = dataMainProgressionNotDone[0][0];
+    const pHref = document.createElement("a");
+    pHref.href = "http://127.0.0.1:5000/api/guide";
+    pHref.innerHTML = "How?";
+    div3.append(img);
+    div3.append(p);
+    div3.append(pHref);
+    div1.append(div3);
+    divNextAchievement.append(div1);
+}
 
 function afficherCardsAchievementProgression(dataProgression) {
     if (Object.entries(dataProgression).length === 0) {
@@ -105,6 +140,7 @@ function afficherCardsAchievementProgression(dataProgression) {
         p.classList.add("mt-2");
         p.innerHTML = dataProgression[achievement][0];
         const pHref = document.createElement("a");
+        //On doit faire une condition selon le type de l'achievement, le how ne va pas toujours etre la
         pHref.href = "http://127.0.0.1:5000/api/guide";
         pHref.innerHTML = "How?";
         div3.append(img);
@@ -121,3 +157,4 @@ async function initialisation() {
 }
 
 window.addEventListener('load', initialisation);
+window.addEventListener('load', afficherNextAchievement)
