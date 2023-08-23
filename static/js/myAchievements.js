@@ -47,7 +47,8 @@ function creerAchievementCards() {
 
 async function afficherAchievements() {
     const completedAchievementsList = await get_all_completed_achievements();
-    console.log(completedAchievementsList);
+    let PENIS = completedAchievementsList.split(";");
+    console.log(PENIS);
 
     //Je devrais faire un switch ici, à faire plus tard
     let iteration = 0;

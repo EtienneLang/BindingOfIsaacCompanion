@@ -1,5 +1,5 @@
 from steam import webapi, steamid
-from flask import Blueprint, render_template, request, redirect, session, current_app as app, jsonify, abort, json
+from flask import Blueprint, render_template, request, redirect, session, current_app as app, jsonify, abort, json, Response
 
 bp_api = Blueprint('bp_api', __name__)
 
@@ -92,7 +92,8 @@ def load_all_player_achievements(profileid):
         if achievement["achieved"] == 1:
             list_achievements.append(achievement["apiname"])
 
-    session["achievements"] = list_achievements
+    string_list = ';'.join(list_achievements)
+    session["achievements"] = string_list
     return render_template("my_achievements.jinja")
 
 
