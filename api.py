@@ -92,8 +92,7 @@ def load_all_player_achievements(profileid):
         if achievement["achieved"] == 1:
             list_achievements.append(achievement["apiname"])
 
-    string_list = ';'.join(list_achievements)
-    session["achievements"] = string_list
+    session["achievements"] = list_achievements
     return render_template("my_achievements.jinja")
 
 

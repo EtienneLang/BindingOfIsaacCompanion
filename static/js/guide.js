@@ -26,6 +26,7 @@ function loadGuide(event) {
         p.innerHTML = dataTextGuide[event.target.id][steps][0];
         let img = document.createElement("img");
         img.src = dataTextGuide[event.target.id][steps][1];
+        img.classList.add("h-100");
         div.append(p);
         div.append(img);
         guideStepsSection.append(div);
