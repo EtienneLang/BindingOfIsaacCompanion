@@ -106,7 +106,7 @@ async function afficherAchievements() {
 function placeCompletionMark(CharacterName, DivCompletion) {
     const img = document.createElement("img");
     img.src = `/static/images/AchievementSheet/Completion${CharacterName}.png`;
-    img.classList.add("col-lg-4");
+    img.classList.add("col-4");
     DivCompletion.append(img);
 }
 
