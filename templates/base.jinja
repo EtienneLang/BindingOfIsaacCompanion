@@ -12,32 +12,37 @@
 </head>
 <body>
     <header class="bg-primary">
-            <div class="container d-flex">
-                <nav class="navbar navbar-expand-lg navbar-dark ">
-                    <div>
-                        <img src="/static/images/LogoIsaacCompanion.png" alt="Logo du site" id="logo">
-                        <a class="navbar-brand" href="/">TBoI Companion</a>
-                    </div>
-                    <div class="collapse navbar-collapse " id="navbarColor01">
-                        <div class="navbar-nav">
-                            {% if session and session.steam_id %}
-                                <li class="nav-item">
-                                    <a class="nav-item nav-link" href="/api/{{ session.steam_id }}/MyAchievements">My achievements</a>
-                                </li>
-                                <li>
-                                    <a class="nav-item nav-link" href="/api/guide">Help me with my run!</a>
-                                </li>
-                                <li>
-                                    <a class="nav-item nav-link" href="/api/{{ session.steam_id }}">My stats</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-item nav-link" href="/logout">Log out</a>
-                                </li>
-                            {% endif %}
-                        </div>
-                    </div>
-                </nav>
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="light">
+            <div class="container-fluid">
+                <img src="/static/images/LogoIsaacCompanion.png" alt="Logo du site" id="logo">
+                <a class="navbar-brand" href="/">TBoI Companion</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="true" aria-label="Toggle navigation">
+                        {% if session and session.steam_id %}
+                            <span class="navbar-toggler-icon"></span>
+                        {% endif %}
+                    </button>
+
+                <div class="navbar-collapse collapse show" id="navbarColor03" style="">
+                    <ul class="navbar-nav me-auto">
+                    {% if session and session.steam_id %}
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/api/{{ session.steam_id }}/MyAchievements">Achievements</a>
+                        </li>
+                        <li>
+                            <a class="nav-item nav-link active" href="/api/guide">Guide</a>
+                        </li>
+                        <li>
+                            <a class="nav-item nav-link active" href="/api/{{ session.steam_id }}">Stats</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link active" href="/logout">Log out</a>
+                        </li>
+                    {% endif %}
+                    </ul>
+                </div>
             </div>
+        </nav>
     </header>
     <main>
         <div class="container">
