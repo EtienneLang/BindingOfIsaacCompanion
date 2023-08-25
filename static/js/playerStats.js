@@ -118,6 +118,7 @@ function afficherCardsAchievementProgression(dataProgression) {
         div1.classList.add("col-xl-3");
         div1.classList.add("col-lg-4");
         div1.classList.add("col-md-6");
+        div1.classList.add("col-6");
         div1.classList.add("cardAchievement");
         div1.classList.add("card");
         div1.classList.add("text-white");
