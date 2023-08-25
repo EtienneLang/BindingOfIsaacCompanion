@@ -15,9 +15,7 @@ def get_steam_id(profile_id):
         steam_id = steamid.from_url(base_url + profile_id)
     return steam_id
 
-
 def get_achievements(steam_id):
-    """Fonction pour renvoyer le dico des achievements du joueur"""
     return steam_api.call("ISteamUserStats.GetPlayerAchievements", appid=250900, steamid=steam_id)
 
 

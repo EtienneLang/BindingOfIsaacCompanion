@@ -4,6 +4,12 @@
     <script src="/static/js/utils.js" defer></script>
 {% endblock %}
 {% block contenu %}
+    {% if error == true %}
+        <div class="alert alert-dismissible alert-danger">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            Steam ID is not valid. Change a few things up and try submitting again.
+        </div>
+    {% endif %}
     <section class="text-center p-5">
         <h1>Binding of Isaac Companion</h1>
         <p>To have access to the companion, please enter your Steam/Profile ID bellow.</p>

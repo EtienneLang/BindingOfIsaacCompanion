@@ -622,7 +622,7 @@ const dataTextGuide= {
         "1" : ["Go to DownPour in the first or second floor", "/static/images/GuideImages/door_downpourDoor.png"],
         "2" : ["On DownPour's second floor, go in the mirror dimension and grab the first knife piece in the item room.", "/static/images/GuideImages/MirrorDoor.png"],
         "3" : ["Go to Ashpit/The Mines after the DownPour second floor's boss", "/static/images/GuideImages/MinesDoor.png"],
-        "4" : ["On AshPit/Mines second floor, click the three buttons and go take the second knife piece.(Remember you will have to lose two hearts to enter mausoleum)", ""],
+        "4" : ["On AshPit/Mines second floor, click the three buttons and go take the second knife piece.(Remember you will have to lose two hearts to enter mausoleum)", "/static/images/GuideImages/MinesBtn.png"],
         "5" : ["Go to Mausoleum after AshPit/The Mines second floor's boss", "/static/images/GuideImages/MusauleumDoor.png"],
         "6" : ["Beat mom on the second floor of mausoleum, DON'T DROP DOWN. Break the flesh door with the knife.", "/static/images/GuideImages/FleshDoor.png"],
         "7" : ["Complete the corpse and beat mother", "/static/images/GuideImages/MotherBossGuide.png"]

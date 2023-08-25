@@ -16,15 +16,6 @@ function steamIdToURL() {
         steamIdValidationText.innerHTML = "Please enter a Steam ID ;(";
         valide = false;
     }
-    // else if (isNaN(steamIdInput.value)) {
-    //     steamIdValidationText.innerHTML = "A Steam ID is only composed of numbers";
-    //     valide = false;
-    // }
-    // else if (steamIdInput.value.length !== 17) {
-    //     steamIdValidationText.innerHTML = "A Steam ID does not count more than 17 characters";
-    //     valide = false;
-    // }
-
     if (valide){
         location.replace("/api/" + steamIdInput.value);
     }
@@ -37,6 +28,15 @@ function steamIdToURL() {
 
 async function initialisation() {
     steamIdButton.addEventListener('click', steamIdToURL);
+    steamIdInput.addEventListener("keypress", function(event) {
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            steamIdButton.click();
+        }
+    });
 }
 
 window.addEventListener('load', initialisation)
