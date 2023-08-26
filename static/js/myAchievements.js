@@ -10,14 +10,12 @@ function creerAchievementCards() {
     for (let perso in dicoTetePerso)
     {
         const card = document.createElement("div");
-        card.classList.add("col-xl-3");
         card.classList.add("col-lg-4");
         card.classList.add("col-md-6");
 
         // Entête de la carte
         const icone = document.createElement("div");
         icone.classList.add("text-center");
-        icone.classList.add("card-header");
         const image = document.createElement("img");
         image.src = dicoTetePerso[perso];
         image.classList.add("w-25");
@@ -26,17 +24,22 @@ function creerAchievementCards() {
 
         // Corps de la carte
         const cardBody = document.createElement("div");
-        cardBody.classList.add("text-center");
-        cardBody.classList.add("card-body");
         cardBody.classList.add("p-4");
+        cardBody.classList.add("row");
+        cardBody.classList.add("justify-content-center");
+        cardBody.classList.add("align-items-center");
+        cardBody.id = `CompletionSheet_Delirium${i}`;
 
         cardBody.style = "background-image: url('/static/images/AchievementSheet/CompletionSheet.png'); " +
             "background-repeat: no-repeat; " +
             "background-position: center; " +
-            "background-size:225px;";
+            "background-size:250px;";
         const sheetDiv = document.createElement("div");
         sheetDiv.style = "height: 250px; border-style: none;"
         sheetDiv.id = `CompletionSheet_${i}`;
+        sheetDiv.classList.add("d-flex");
+        sheetDiv.classList.add("align-items-center");
+        sheetDiv.classList.add("justify-content-center");
         cardBody.append(sheetDiv);
         card.append(cardBody);
         myAchievementsSection.append(card);
@@ -53,11 +56,13 @@ async function afficherAchievements() {
     for(let perso in dataAllAchievements){
         const divCompletion = document.createElement("div");
         divCompletion.classList.add("row");
-        divCompletion.classList.add("p-5");
-        divCompletion.classList.add("d-flex");
         divCompletion.classList.add("justify-content-center");
-        divCompletion.classList.add("align-items-center");
+        divCompletion.classList.add("col-xl-6");
+        divCompletion.classList.add("col-lg-12");
+        divCompletion.classList.add("col-md-9");
+        divCompletion.classList.add("col-8");
         let idCard = document.getElementById(`CompletionSheet_${iteration}`);
+        let idDelirium = document.getElementById(`CompletionSheet_Delirium${iteration}`);
         for(let i=0; i < completedAchievementsList.length; i++) {
             //Si on a tous les achievements, on sort de la boucle
             // if(completedAchievementsList[i] === dataAllAchievements[perso]["AllAchievements"]) {
@@ -95,6 +100,12 @@ async function afficherAchievements() {
             }
             else if (completedAchievementsList[i] === dataAllAchievements[perso]["Beast"]) {
                 placeCompletionMark("Beast", divCompletion);
+            }
+            else if (completedAchievementsList[i] === dataAllAchievements[perso]["Delirium"]) {
+                 idDelirium.style = "background-image: url('/static/images/AchievementSheet/CompletionSheetDelirium.png'); " +
+                "background-repeat: no-repeat; " +
+                "background-position: center; " +
+                "background-size:250px;";
             }
         }
         idCard.append(divCompletion);
