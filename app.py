@@ -38,4 +38,11 @@ def bad_request(e):
     return render_template('erreur.jinja', error = message), 400
 
 
+@app.errorhandler(404)
+def bad_request(e):
+    """Affiche une page d'erreur 400"""
+    app.logger.error("Erreur 404 : %s", e)
+    message = "Bad request. Please enter a valid steam ID."
+    return render_template('erreur.jinja', error=message), 404
+
 

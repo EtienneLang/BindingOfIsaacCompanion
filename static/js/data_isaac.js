@@ -644,13 +644,8 @@ const dataMainProgression = {
     //Structure du dictionnaire [Id de l'achievement][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
     "4" : ["Defeat Mom", "The Womb"],
     "150" : ["Defeat Mom's Heart 2 times", "Rubber Cement"],
-    "139" : ["Defeat Mom's Heart 4 times", "Wire Coat Hanger"],
-    "11" : ["Defeat Mom's Heart 5 times", "Dr. Fetus"],
-    "140" : ["Defeat Mom's Heart 6 times", "Ipecac"],
-    "35" : ["Defeat Mom's Heart 7 times", "Experimental Treatment"],
     "234" : ["Defeat Mom's Heart 10 times", "Blue Womb"],
     "34" : ["Defeat Mom's Heart 11 times", "It Lives!"],
-    "43" : ["Defeat Satan as Isaac", "Mom's Knife (And Judas if it's your first time beating satan)"],
     "57" : ["Defeat Isaac 5 times", "The Polaroid"],
     "78" : ["Defeat Satan 5 times", "The Negative"],
     "320" : ["Defeat Hush", "New Area (The void for Delirium)"],
@@ -660,10 +655,13 @@ const dataMainProgression = {
 
 const dataGoodItemsProgression = {
     //Structure du dictionnaire [Id de l'achievement][0 = Description de l'unlock, 1 = Nom de ce que ça débloque]
+    "140" : ["Defeat Mom's Heart 6 times", "Ipecac"],
+    "11" : ["Defeat Mom's Heart 5 times", "Dr. Fetus"],
     "29" : ["Defeat Isaac as BlueBaby", "The D6"],
+    "43" : ["Defeat Satan as Isaac", "Mom's Knife"],
     "103": ["Complete Waka Waka challenge", "Death's Touch"],
     "112": ["Complete Bush Rush as Eve", "Eve's Mascara"],
-    "52" : ["Defeat The Lamb as Judas", "Curved Horn"],
+    // "52" : ["Defeat The Lamb as Judas", "Curved Horn"],
     "62" : ["Complete The Family man challenge", "Epic Fetus"],
     "156" : ["Earn all completion mark with the lost", "Godhead"],
     "138" : ["Donate 999 coins to the donation machine", "Stop Watch"],

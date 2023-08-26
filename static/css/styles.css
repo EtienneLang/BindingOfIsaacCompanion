@@ -139,4 +139,9 @@ nav a:hover {
   text-decoration: underline;
 }
 
+#guideLinkText {
+  font-weight: bold;
+  font-style: italic;
+}
+
 /*# sourceMappingURL=styles.css.map */

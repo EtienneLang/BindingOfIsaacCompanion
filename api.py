@@ -62,10 +62,12 @@ def get_all_steam_information(profileid):
     achievements_completed = 0
     steam_id = get_steam_id(profileid)
     achievements = get_achievements(steam_id)
+    session.clear()
     session["steam_id"] = steam_id
     player_information = get_player_information(steam_id)
     player_has_isaac = does_player_has_isaac(steam_id)
     all_game_achievements = get_game_information()
+
     if player_has_isaac:
         for achievement in achievements["playerstats"]["achievements"]:
             if achievement["achieved"] == 1:

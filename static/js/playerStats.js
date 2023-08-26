@@ -112,7 +112,30 @@ function afficherCardsAchievementProgression(dataProgression) {
         divStatsAchievements.append(div);
         return;
     }
+    if (dataProgression === dataMainProgression) {
+        let h5 = document.createElement("h5");
+        h5.classList.add("text-center");
+        h5.classList.add("w-75");
+        h5.innerHTML = "Here, you will see all the achievements you need to unlock all of the areas and complete the main game content."
+        divStatsAchievements.append(h5);
+    }
+    else if (dataProgression === dataCharactersProgression) {
+        let h5 = document.createElement("h5");
+        h5.classList.add("text-center");
+        h5.classList.add("w-75");
+        h5.innerHTML = "Here, you will see all the achievements you need to unlock all of the characters. " +
+            "When you have to unlock one with a specific character, you will see the character's name in the achievement's description."
+        divStatsAchievements.append(h5);
+    }
+    else if (dataProgression === dataGoodItemsProgression) {
+    let h5 = document.createElement("h5");
+    h5.classList.add("text-center");
+    h5.classList.add("w-75");
+    h5.innerHTML = "Here, you will see all the achievements you need to unlock all of the good items in the game."
+    divStatsAchievements.append(h5);
+    }
     for (const achievement in dataProgression) {
+
         const div1 = document.createElement("div");
         div1.classList.add("rounded-2")
         div1.classList.add("col-xl-3");
@@ -142,8 +165,6 @@ function afficherCardsAchievementProgression(dataProgression) {
         p.innerHTML = dataProgression[achievement][0];
         const pHref = document.createElement("a");
         //On doit faire une condition selon le type de l'achievement, le how ne va pas toujours etre la
-        pHref.href = "http://127.0.0.1:5000/api/guide";
-        pHref.innerHTML = "How?";
         div3.append(img);
         div3.append(p);
         div3.append(pHref);
