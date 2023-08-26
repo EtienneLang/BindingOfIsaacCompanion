@@ -58,9 +58,9 @@ async function afficherAchievements() {
         divCompletion.classList.add("row");
         divCompletion.classList.add("justify-content-center");
         divCompletion.classList.add("col-xl-6");
-        divCompletion.classList.add("col-lg-12");
-        divCompletion.classList.add("col-md-9");
-        divCompletion.classList.add("col-8");
+        divCompletion.classList.add("col-lg-9");
+        divCompletion.classList.add("col-md-7");
+        divCompletion.classList.add("col-5");
         let idCard = document.getElementById(`CompletionSheet_${iteration}`);
         let idDelirium = document.getElementById(`CompletionSheet_Delirium${iteration}`);
         for(let i=0; i < completedAchievementsList.length; i++) {
@@ -118,6 +118,7 @@ function placeCompletionMark(CharacterName, DivCompletion) {
     const img = document.createElement("img");
     img.src = `/static/images/AchievementSheet/Completion${CharacterName}.png`;
     img.classList.add("col-4");
+    img.classList.add("h-100");
     DivCompletion.append(img);
 }
 
