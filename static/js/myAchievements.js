@@ -57,12 +57,16 @@ async function afficherAchievements() {
         const divCompletion = document.createElement("div");
         divCompletion.classList.add("row");
         divCompletion.classList.add("justify-content-center");
+        divCompletion.classList.add("align-items-center");
         divCompletion.classList.add("col-xl-6");
         divCompletion.classList.add("col-lg-9");
         divCompletion.classList.add("col-md-7");
         divCompletion.classList.add("col-5");
         let idCard = document.getElementById(`CompletionSheet_${iteration}`);
         let idDelirium = document.getElementById(`CompletionSheet_Delirium${iteration}`);
+        let satanBeaten = false;
+        let isaacBeaten = false;
+        let heartBeaten = false;
         for(let i=0; i < completedAchievementsList.length; i++) {
             //Si on a tous les achievements, on sort de la boucle
             // if(completedAchievementsList[i] === dataAllAchievements[perso]["AllAchievements"]) {
@@ -70,38 +74,41 @@ async function afficherAchievements() {
             // }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["Satan"]) {
                 placeCompletionMark("Satan", divCompletion);
+                satanBeaten = true;
             }
-            else if(completedAchievementsList[i] === dataAllAchievements[perso]["BlueBaby"]) {
+            if(completedAchievementsList[i] === dataAllAchievements[perso]["BlueBaby"]) {
                 placeCompletionMark("BlueBaby", divCompletion);
             }
-            else if(completedAchievementsList[i] === dataAllAchievements[perso]["BossRush"]) {
+            if(completedAchievementsList[i] === dataAllAchievements[perso]["BossRush"]) {
                 placeCompletionMark("BossRush", divCompletion);
             }
-            else if(completedAchievementsList[i] === dataAllAchievements[perso]["Isaac"]) {
+            if(completedAchievementsList[i] === dataAllAchievements[perso]["Isaac"]) {
                 placeCompletionMark("Isaac", divCompletion);
+                isaacBeaten = true;
             }
-            else if(completedAchievementsList[i] === dataAllAchievements[perso]["TheLamb"]) {
+            if(completedAchievementsList[i] === dataAllAchievements[perso]["TheLamb"]) {
                 placeCompletionMark("TheLamb", divCompletion);
             }
-            else if(completedAchievementsList[i] === dataAllAchievements[perso]["Heart"]) {
+            if((isaacBeaten || satanBeaten) && heartBeaten === false) {
+                heartBeaten = true;
                 placeCompletionMark("Heart", divCompletion);
             }
-            else if(completedAchievementsList[i] === dataAllAchievements[perso]["Hush"]) {
+            if(completedAchievementsList[i] === dataAllAchievements[perso]["Hush"]) {
                 placeCompletionMark("Hush", divCompletion);
             }
-            else if(completedAchievementsList[i] === dataAllAchievements[perso]["Greedier"]) {
+            if(completedAchievementsList[i] === dataAllAchievements[perso]["Greedier"]) {
                 placeCompletionMark("Greedier", divCompletion);
             }
-            else if (completedAchievementsList[i] === dataAllAchievements[perso]["MegaSatan"]) {
+            if (completedAchievementsList[i] === dataAllAchievements[perso]["MegaSatan"]) {
                 placeCompletionMark("MegaSatan", divCompletion);
             }
-            else if (completedAchievementsList[i] === dataAllAchievements[perso]["Mother"]) {
+            if (completedAchievementsList[i] === dataAllAchievements[perso]["Mother"]) {
                 placeCompletionMark("Mother", divCompletion);
             }
-            else if (completedAchievementsList[i] === dataAllAchievements[perso]["Beast"]) {
+            if (completedAchievementsList[i] === dataAllAchievements[perso]["Beast"]) {
                 placeCompletionMark("Beast", divCompletion);
             }
-            else if (completedAchievementsList[i] === dataAllAchievements[perso]["Delirium"]) {
+            if (completedAchievementsList[i] === dataAllAchievements[perso]["Delirium"]) {
                  idDelirium.style = "background-image: url('/static/images/AchievementSheet/CompletionSheetDelirium.png'); " +
                 "background-repeat: no-repeat; " +
                 "background-position: center; " +
@@ -110,6 +117,9 @@ async function afficherAchievements() {
         }
         idCard.append(divCompletion);
         iteration++;
+        isaacBeaten = false;
+        satanBeaten = false;
+        heartBeaten = false;
     }
 
 }
