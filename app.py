@@ -15,6 +15,11 @@ def clear_session():
     return redirect("/")
 
 
+@app.route('/feedback')
+def feedback():
+    """Affiche la page de feedback"""
+    return render_template('feedback.jinja')
+
 @app.route('/')
 def index():
     """Affiche l'accueil"""
@@ -42,7 +47,7 @@ def bad_request(e):
 def bad_request(e):
     """Affiche une page d'erreur 400"""
     app.logger.error("Erreur 404 : %s", e)
-    message = "Bad request. Please enter a valid steam ID."
+    message = "Bad request."
     return render_template('erreur.jinja', error=message), 404
 
 

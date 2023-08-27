@@ -1,0 +1,43 @@
+{% extends "base.jinja" %}
+{% block title %}BoI Companion{% endblock %}
+{% block scripts %}
+    <script src="https://www.paypal.com/sdk/js?client-id=test&components=buttons,funding-eligibility"></script>
+{% endblock %}
+{% block contenu %}
+    <section class="text-center p-5" id="informations" >
+        <div>
+            <h1 class="p-4">Feedback</h1>
+            <p>Have a suggestion? Found a bug? Want to say hi? I'd love to hear from you! Has a young developper, I'm always looking for ways to improve myself and the site to make it more useful.
+            Send me an email by clicking bellow.
+            </p>
+            <a class="btn btn-primary m-3" href="mailto:tboicompanion@gmail.com">Send email</a>
+        </div>
+        <div>
+            <h1 class="p-4">Information</h1>
+            <p>Are you a fan of The Binding of Isaac, the thrilling and challenging roguelike game that keeps you hooked for hours? Well, you're in the right place! I'm Étienne, a young and passionate developer who's still in school, and I've poured my heart and soul into creating this website dedicated to helping people in isaac.</p>
+        </div>
+        <div>
+            <h1 class="p-4">Donations</h1>
+            <p>Here's where you come in. As a budding developer, I've invested countless hours into making this website a hub for all Isaac enthusiasts. However, maintaining a website and continuously updating it with fresh content requires resources.
+                Your support can play a pivotal role in helping me continue doing what I love – bringing valuable and exciting Isaac-related content to fellow fans like you!</p>
+            <div class="d-flex justify-content-around" id="divDonation">
+                <img style="width: 50px;height : 100%" src="/static/images/isaacThumsUp.png">
+                <form class="p-5" action="https://www.paypal.com/donate" method="post" target="_top">
+                <!-- Identify your business so that you can collect the payments. -->
+                    <input type="hidden" name="business" value="tboicompanion@gmail.com">
+                    <!-- Specify details about the contribution -->
+                    <input type="hidden" name="no_recurring" value="0">
+                    <input type="hidden" name="item_name" value="Friends of the Park">
+                    <input type="hidden" name="item_number" value="Help with the hosting">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <!-- Display the payment button. -->
+                    <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate">
+                    <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+                </form>
+                <img style="width: 50px;height : 100%" src="/static/images/isaacThumsUp.png">
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}
