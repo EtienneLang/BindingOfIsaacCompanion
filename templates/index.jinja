@@ -12,9 +12,9 @@
     {% endif %}
     <section class="text-center p-5">
         <h1>Binding of Isaac Companion</h1>
-        <p>To have access to the companion, please enter your Steam/Profile ID bellow.</p>
         {% if not session and not session.steam_id %}
-         <form>
+        <p>To have access to the companion, please enter your Steam/Profile ID bellow.</p>
+        <form>
             <label for="steamid-input" >STEAM ID :</label>
             <input type="text" id="steamid-input" name="steamid-input" placeholder="Steam Id...">
             <input type="button" id="steamid-button" value="Let's go">
@@ -30,24 +30,25 @@
 
     <section>
         <h4 class="mb-3 text-center">
-            Informations about Isaac Companion
+            Some information about Isaac Companion
         </h4>
-        <div class="row justify-content-center">
-            <div class="card-info text-center col-xl-4 col-md-12">
+        <div class="row justify-content-around">
+            <div class="card-info text-center col-xl-4 col-md-12 p-3">
                 <h5>Purpose</h5>
                 <img src="/static/images/Stage_Chest_room.webp" alt="MiroirStageImage" class="w-100 rounded">
                 <p class="p-3">The goal of this website is to help you to begin your journey playing The Binding of Isaac. You will find plenty of tips and tricks to obtain the main achievements in the game so you can progress faster.</p>
             </div>
-            <div class="card-info text-center col-xl-4 col-md-12">
+            <div class="card-info text-center col-xl-4 col-md-12 p-3">
                 <h5>Achievements</h5>
                 <img src="/static/images/Stage_Caves_room.webp" alt="CavesStageImage" class="w-100 rounded">
                 <p class="p-3">Achievements in The Binding of Isaac are a huge part of the game. Each boss you kill will unlock a new item that will to spawn in your next runs. In the tab "My Achievements", you can take a look at all the completion mark you have done with every characters.</p>
             </div>
-            <div class="card-info text-center col-xl-4 col-md-12">
+            <div class="card-info text-center col-xl-4 col-md-12 p-3">
                 <h5>Help with runs</h5>
                 <img src="/static/images/Stage_Corpse_room.webp" alt="CorpseStageImage" class="w-100 rounded">
                 <p class="p-3">The companion can help doing your runs without forgeting any steps. Often, you forget about a little thing in your run and it ruins it, so with this website you won't forget anything anymore.</p>
             </div>
+            <h5 class="text-center"><a href="/feedback">More informations...</a></h5>
         </div>
     </section>
 {% endblock %}
