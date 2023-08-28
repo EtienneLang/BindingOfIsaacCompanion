@@ -159,6 +159,7 @@ function afficherCardsAchievementProgression(dataProgression) {
         const img = document.createElement("img");
         img.classList.add("rounded-3");
         img.classList.add("img-fluid");
+        img.alt = "Achievement icon" + dataProgression[achievement][1];
         img.src = dataProgression[achievement][2];
         const p = document.createElement("p");
         p.classList.add("mt-2");
