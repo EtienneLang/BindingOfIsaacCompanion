@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, redirect
+from flask import Flask, render_template, session, redirect,send_from_directory
 from api import bp_api
 from steamAuthOpenId import bp_steamAuth
 
@@ -26,6 +26,9 @@ def index():
     app.logger.info("L'utilisateur va à l'accueil du site")
     return render_template('index.jinja')
 
+@app.route('/ads.txt')
+def ads():
+    return send_from_directory('./', 'ads.txt')
 
 @app.errorhandler(500)
 def server_error(e):
