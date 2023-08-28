@@ -8,7 +8,7 @@ function loadGuide(event) {
     const backButton = document.createElement("div");
     backButton.classList.add("btn");
     backButton.classList.add("btn-primary");
-    backButton.classList.add("btn-lg");
+    backButton.classList.add("p-2");
     backButton.innerHTML = "Back";
     BackButton.append(backButton);
     backButton.addEventListener("click", function () {

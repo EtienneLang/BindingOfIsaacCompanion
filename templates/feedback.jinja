@@ -23,19 +23,21 @@
             <div class="d-flex justify-content-around" id="divDonation">
                 <img style="width: 50px;height : 100%" src="/static/images/isaacThumsUp.png">
                 <div id="donate-button-container">
-                <div id="donate-button" class="bg-white rounded-pill" ></div>
-                    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                    <script>
-                        PayPal.Donation.Button({
-                        env:'production',
-                        hosted_button_id:'ALN49D2JF9B64',
-                        image: {
-                        src:'https://pics.paypal.com/00/s/NzFmYzI3NTEtNTAxNi00ODBlLThhNzQtNWFmZDY5ZjBlYmEz/file.PNG',
-                        alt:'Donate with PayPal button',
-                        title:'PayPal - The safer, easier way to pay online!',
+                    <div id="donate-button-container">
+                        <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                            PayPal.Donation.Button({
+                            env:'production',
+                            hosted_button_id:'ALN49D2JF9B64',
+                            image: {
+                            src:'https://pics.paypal.com/00/s/MmQ4OGZkNjEtMjRhZi00NmQyLWIwYjgtMzZhMjhkZTVlMTg2/file.PNG',
+                            alt:'Donate with PayPal button',
+                            title:'PayPal - The safer, easier way to pay online!',
                         }
                         }).render('#donate-button');
-                    </script>
+                        </script>
+                    </div>
                 </div>
 
                 <img style="width: 50px;height : 100%" src="/static/images/isaacThumsUp.png">

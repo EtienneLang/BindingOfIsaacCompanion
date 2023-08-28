@@ -621,6 +621,21 @@ const dataTextGuide= {
         "3" : ["Go in the hole that has appeared on the wall.", ""],
         "4" : ["Take an item. Directly after that the boss rush will start. Defeat the 15 rounds of 2 bosses",""],
     },
+    "GuideMegaSatan":{
+        "1" : ["To do a mega Satan run, you need to skip all devil rooms", ""],
+        "2" : ["You also need to avoid the maximum amount of damage you take so you angel deals chance stays up and keep 2 bombs minimum for the angels", ""],
+        "3" : ["Once you enter an angel room, take the item and blow up the angel. Defeat the boss and take the key item", ""],
+        "4" : ["After that, do the same thing on a other floor", ""],
+        "5" : ["Once you have the two key pieces, do a normal run going to the chest or the dark room", ""],
+        "6" : ["Once in the chest or dark room, the big door will unlock", ""],
+        "7" : ["Simply go into the door and defeat Mega Satan", ""],
+    },
+    "GuideDelirum" : {
+        "1" : ["Make your way to the Depths 2 floor, where you'll find the Mom boss fight. Defeat Mom to unlock the trapdoor leading down to Utero.", "/static/images/GuideImages/MomBossGuide.png"],
+        "2" : ["If you beat hush, the portal to the void will have 100% to spawn. So technically it's the best way to go. But you can also drop down and ", "/static/images/GuideImages/HeartBossGuide.png"],
+        "3" : ["Go in the hole that has appeared on the wall.", ""],
+        "4" : ["Defeat Hush", "/static/images/GuideImages/HushBossGuide.png"],
+    },
     "GuideMother" : {
         "1" : ["Go to DownPour in the first or second floor", "/static/images/GuideImages/door_downpourDoor.png"],
         "2" : ["On DownPour's second floor, go in the mirror dimension and grab the first knife piece in the item room.", "/static/images/GuideImages/MirrorDoor.png"],

@@ -25,10 +25,14 @@ main {
   background-size: 100%;
 }
 
+.steam_logo {
+  width: 10%;
+}
+
 .steam_button {
   width: 300px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 5px;
   background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(27, 40, 56) 50%, rgb(42, 71, 94) 100%);
   transition: background 5s ease-out;
 }
@@ -44,6 +48,7 @@ main {
 .guide div {
   background-color: #1a1a1a;
   padding-top: 10px;
+  padding-bottom: 10px;
   margin: 10px;
   border-radius: 10px;
   color: white;
