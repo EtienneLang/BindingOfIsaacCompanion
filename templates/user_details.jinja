@@ -7,7 +7,7 @@
 {% block contenu %}
     <div class="text-center">
         <h1>Hello {{ player_name }} !</h1>
-        <img src="{{ profile_pic }}" class="border border-dark">
+        <img src="{{ profile_pic }}" class="border border-dark" alt="Profile Picture">
         <p class="mt-4">Achievements Unlocked : {{ achievements_completed }}</p>
     </div>
     <div class="m-5">
@@ -16,7 +16,7 @@
         </h2>
         <div class="row justify-content-center">
         {% for i in latest_achievements %}
-            <img src="{{ i }}" alt="achievement{{ i }}" class="col-md-1 col-3 p-2" alt="Profile Picture">
+            <img src="{{ i }}" alt="achievement{{ i }}" class="col-md-1 col-3 p-2" alt="Achievement{{ i }}">
         {% endfor %}
         </div>
     </div>
