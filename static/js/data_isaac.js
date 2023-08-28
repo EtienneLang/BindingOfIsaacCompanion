@@ -707,7 +707,7 @@ const dataCharactersProgression = {
     "199" : ["Defeat Ultra Greed with Azazel", "Lilith"],
     "251" :  ["Donate 1000 coins to the Greed Machine", "Keeper"],
     "340" : ["Defeat Mega Satan", "Apollyon"],
-    //Fuck The forgotten
+    "390" : ["Guide Comming Soon...", "The Forgotten"],
     "404" : ["Beat Hard mode as Lazarus without losing a life", "Bethany"],
     "405" : ["Beat Mother", "Jacob and Esau"],
 }

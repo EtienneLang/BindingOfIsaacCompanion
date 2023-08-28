@@ -15,13 +15,17 @@
         {% if not session and not session.steam_id %}
         <p>To have access to the companion, please enter your Steam/Profile ID bellow.</p>
         <form>
-            <label for="steamid-input" >STEAM ID :</label>
-            <input type="text" id="steamid-input" name="steamid-input" placeholder="Steam Id...">
-            <input type="button" id="steamid-button" value="Let's go">
-            <div class="invalid-feedback" id="validation_steam_id"></div>
+            <div class="row justify-content-center text-center">
+                <input class="col-md-5 col-10" type="text" id="steamid-input" name="steamid-input" placeholder="Steam Id...">
+                <input class="col-md-3 col-2" type="button" id="steamid-button" value="Let's go">
+                <div class="invalid-feedback" id="validation_steam_id"></div>
+                <small class="form-text text-muted col-12"><a href="https://www.steamidfinder.com/">What is my steam id?</a></small>
+            </div>
+
         </form>
+
         <h4 class="p-3">Or...</h4>
-        <div class="steam_button text-center">
+        <div class="steam_button text-center position-relative">
             <a href="/steamAuth" class="stretched-link">Log in with steam</a>
             <img src="/static/images/steam-logo-black-transparent.png" alt="SteamLogo" class="steam_logo">
         </div>
