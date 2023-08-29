@@ -33,7 +33,7 @@ function creerAchievementCards() {
         cardBody.style = "background-image: url('/static/images/AchievementSheet/CompletionSheet.png'); " +
             "background-repeat: no-repeat; " +
             "background-position: center; " +
-            "background-size:250px;";
+            "background-size:300px;";
         const sheetDiv = document.createElement("div");
         sheetDiv.style = "height: 250px; border-style: none;"
         sheetDiv.id = `CompletionSheet_${i}`;
@@ -58,10 +58,17 @@ async function afficherAchievements() {
         divCompletion.classList.add("row");
         divCompletion.classList.add("justify-content-center");
         divCompletion.classList.add("align-items-center");
-        divCompletion.classList.add("col-xl-6");
-        divCompletion.classList.add("col-lg-9");
         divCompletion.classList.add("col-md-7");
-        divCompletion.classList.add("col-5");
+        divCompletion.classList.add("col-6");
+
+        divCompletion.style = "margin-right : 20px"
+
+        for (let i = 0; i < 11; i++) {
+            let caseIcone = document.createElement("div");
+            caseIcone.classList.add("col-4");
+            caseIcone.classList.add("text-center");
+            divCompletion.append(caseIcone);
+        }
         let idCard = document.getElementById(`CompletionSheet_${iteration}`);
         let idDelirium = document.getElementById(`CompletionSheet_Delirium${iteration}`);
         let satanBeaten = false;
@@ -69,50 +76,47 @@ async function afficherAchievements() {
         let heartBeaten = false;
         for(let i=0; i < completedAchievementsList.length; i++) {
             //Si on a tous les achievements, on sort de la boucle
-            // if(completedAchievementsList[i] === dataAllAchievements[perso]["AllAchievements"]) {
-            //     break;
-            // }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["Satan"]) {
-                placeCompletionMark("Satan", divCompletion);
+                placeCompletionMark("Satan", divCompletion.children[1]);
                 satanBeaten = true;
             }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["BlueBaby"]) {
-                placeCompletionMark("BlueBaby", divCompletion);
+                placeCompletionMark("BlueBaby", divCompletion.children[4]);
             }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["BossRush"]) {
-                placeCompletionMark("BossRush", divCompletion);
+                placeCompletionMark("BossRush", divCompletion.children[3]);
             }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["Isaac"]) {
-                placeCompletionMark("Isaac", divCompletion);
+                placeCompletionMark("Isaac", divCompletion.children[2]);
                 isaacBeaten = true;
             }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["TheLamb"]) {
-                placeCompletionMark("TheLamb", divCompletion);
+                placeCompletionMark("TheLamb", divCompletion.children[5]);
             }
             if((isaacBeaten || satanBeaten) && heartBeaten === false) {
                 heartBeaten = true;
-                placeCompletionMark("Heart", divCompletion);
+                placeCompletionMark("Heart", divCompletion.children[0]);
             }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["Hush"]) {
-                placeCompletionMark("Hush", divCompletion);
+                placeCompletionMark("Hush", divCompletion.children[6]);
             }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["Greedier"]) {
-                placeCompletionMark("Greedier", divCompletion);
+                placeCompletionMark("Greedier", divCompletion.children[7]);
             }
             if (completedAchievementsList[i] === dataAllAchievements[perso]["MegaSatan"]) {
-                placeCompletionMark("MegaSatan", divCompletion);
+                placeCompletionMark("MegaSatan", divCompletion.children[8]);
             }
             if (completedAchievementsList[i] === dataAllAchievements[perso]["Mother"]) {
-                placeCompletionMark("Mother", divCompletion);
+                placeCompletionMark("Mother", divCompletion.children[9]);
             }
             if (completedAchievementsList[i] === dataAllAchievements[perso]["Beast"]) {
-                placeCompletionMark("Beast", divCompletion);
+                placeCompletionMark("Beast", divCompletion.children[10]);
             }
             if (completedAchievementsList[i] === dataAllAchievements[perso]["Delirium"]) {
                  idDelirium.style = "background-image: url('/static/images/AchievementSheet/CompletionSheetDelirium.png'); " +
                 "background-repeat: no-repeat; " +
                 "background-position: center; " +
-                "background-size:250px;";
+                "background-size:300px;";
             }
         }
         idCard.append(divCompletion);
@@ -124,12 +128,10 @@ async function afficherAchievements() {
 
 }
 
-function placeCompletionMark(CharacterName, DivCompletion) {
+function placeCompletionMark(CharacterName, caseAppend) {
     const img = document.createElement("img");
     img.src = `/static/images/AchievementSheet/Completion${CharacterName}.png`;
-    img.classList.add("col-4");
-    img.classList.add("h-100");
-    DivCompletion.append(img);
+    caseAppend.append(img);
 }
 
 async function initialisation() {
