@@ -155,4 +155,18 @@ nav a:hover {
   font-size: 1.2em;
 }
 
+#donate-button-container {
+  padding: 10px;
+  background-color: #d9534f;
+  border-radius: 10px;
+}
+#donate-button-container #donate-button {
+  color: white;
+  text-decoration: none;
+}
+#donate-button-container #donate-button:hover {
+  color: white;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=styles.css.map */

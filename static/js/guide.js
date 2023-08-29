@@ -27,7 +27,10 @@ function loadGuide(event) {
         let img = document.createElement("img");
         img.src = dataTextGuide[event.target.id][steps][1];
         img.classList.add("h-100");
-        img.alt = "Step image";
+        if (dataTextGuide[event.target.id][steps][1] !== ""){
+            img.alt = "Step image";
+        }
+
         div.append(p);
         div.append(img);
         guideStepsSection.append(div);

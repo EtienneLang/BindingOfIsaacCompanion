@@ -75,19 +75,23 @@ async function afficherAchievements() {
         let isaacBeaten = false;
         let heartBeaten = false;
         for(let i=0; i < completedAchievementsList.length; i++) {
+            // if (completedAchievementsList[i] === "183" && perso === "blueBaby") {
+            //     let allop = "asd";
+            // }
+
             //Si on a tous les achievements, on sort de la boucle
             if(completedAchievementsList[i] === dataAllAchievements[perso]["Satan"]) {
-                placeCompletionMark("Satan", divCompletion.children[1]);
+                placeCompletionMark("Satan", divCompletion.children[4]);
                 satanBeaten = true;
             }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["BlueBaby"]) {
-                placeCompletionMark("BlueBaby", divCompletion.children[4]);
+                placeCompletionMark("BlueBaby", divCompletion.children[2]);
             }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["BossRush"]) {
                 placeCompletionMark("BossRush", divCompletion.children[3]);
             }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["Isaac"]) {
-                placeCompletionMark("Isaac", divCompletion.children[2]);
+                placeCompletionMark("Isaac", divCompletion.children[1]);
                 isaacBeaten = true;
             }
             if(completedAchievementsList[i] === dataAllAchievements[perso]["TheLamb"]) {
