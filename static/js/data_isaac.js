@@ -693,7 +693,7 @@ const dataGoodItemsProgression = {
     "377" : ["Acquire Blood Clot 10 times", "Haemolacria"],
     "379" : ["Enter 6 shops in one run", "Schoolbag"],
     "491" : ["Defeat The Beast with Tainted Isaac", "Glitched Crown"],
-    "396" : ["Defeat The Lamb with The Forgotten", "Wooden Nickel"],
+    "396" : ["Defeat The Lamb with The Forgotten", "Brittle Bones"],
     "415" : ["Open the chest in mom's room", "Red Key"],
     "431" : ["Defeat BlueBaby with Jacob and Esau", "Birthright"],
     "432" : ["Defeat The Lamb with Jacob and Esau", "Damocles"],
