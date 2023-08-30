@@ -667,7 +667,7 @@ const dataMainProgression = {
     "57" : ["Defeat Isaac 5 times", "The Polaroid"],
     "78" : ["Defeat Satan 5 times", "The Negative"],
     "320" : ["Defeat Hush", "New Area (The void for Delirium)"],
-    "407" : ["Beat Hust 3 times", "A Secret Ending (Path to mother)"],
+    "407" : ["Beat Hush 3 times", "A Secret Ending (Path to mother)"],
     "635" : ["Defeat Mother", "A strange door (Path to The Beast)"]
 }
 
