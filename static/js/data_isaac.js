@@ -604,9 +604,9 @@ const dataTextGuide= {
     },
     "GuideTheLamb":{
         "1" : ["Make your way to the Depths 2 floor, where you'll find the Mom boss fight. After the fight, make sure to take the item at the right (The negative) and go down", "/static/images/GuideImages/MomBossGuide.png"],
-        "3" : ["After Mom's hearts, go in the trapdoor, NOT in the beam of light", "/static/images/GuideImages/Negative.png"],
-        "4" : ["Find the boss room in Sheol and defeat Satan", "/static/images/GuideImages/SatanBossGuide.png"],
-        "5" : ["After Satan, go in the chest that appears and defeat find the boss room to defeat The Lamb", "/static/images/GuideImages/TheLambBossGuide.png"],
+        "2" : ["After Mom's hearts, go in the trapdoor, NOT in the beam of light", "/static/images/GuideImages/Negative.png"],
+        "3" : ["Find the boss room in Sheol and defeat Satan", "/static/images/GuideImages/SatanBossGuide.png"],
+        "4" : ["After Satan, go in the chest that appears and defeat find the boss room to defeat The Lamb", "/static/images/GuideImages/TheLambBossGuide.png"],
     },
     "GuideHush":{
         "1" : ["Make your way to the Depths 2 floor, where you'll find the Mom boss fight. Defeat Mom to unlock the trapdoor leading down to Utero.", "/static/images/GuideImages/MomBossGuide.png"],
@@ -616,8 +616,8 @@ const dataTextGuide= {
     },
     "GuideBossRush":{
         "1" : ["Make your way to the Depths 2 floor, where you'll find the Mom boss fight. Defeat Mom under 20 minutes.", "/static/images/GuideImages/MomBossGuide.png"],
-        "3" : ["Go in the hole that has appeared on the wall.", ""],
-        "4" : ["Take an item. Directly after that the boss rush will start. Defeat the 15 rounds of 2 bosses",""],
+        "2" : ["Go in the hole that has appeared on the wall.", ""],
+        "3" : ["Take an item. Directly after that the boss rush will start. Defeat the 15 rounds of 2 bosses",""],
     },
     "GuideMegaSatan":{
         "1" : ["To do a mega Satan run, you need to skip all devil rooms", ""],
