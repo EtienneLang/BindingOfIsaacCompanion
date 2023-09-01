@@ -1,0 +1,34 @@
+{% extends "base.jinja" %}
+{% block title %}BoI Companion{% endblock %}
+{% block scripts %}
+    <script src="/static/js/utils.js" defer></script>
+{% endblock %}
+{% block contenu %}
+<form>
+    <div class="row">
+        <div class="form-group">
+            <label for="nom">Name</label>
+            <input type="text" name="nom" id="nom" value="" class="form-control">
+        </div>
+        <div class="form-group">
+             <label for="courriel">Email</label>
+            <input type="email" name="courriel" id="courriel" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="mdp">Password</label>
+            <input class="form-control" type="password" name="mdp" id="mdp">
+        </div>
+        <div class="form-group">
+            <label for="mdp2">Password Confirmation</label>
+            <input class="form-control" type="password" name="mdp2" id="mdp2">
+        </div>
+    </div>
+{#    <div class="invalid-feedback">{{ texte_invalide }}</div>#}
+    <div class="d-flex justify-content-center">
+         <input type="submit" class="button btn-primary my-3" value="Create my account">
+    </div>
+</form>
+
+
+{% endblock %}
+
