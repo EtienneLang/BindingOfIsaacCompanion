@@ -5,30 +5,33 @@
     <script src="/static/js/utils.js" defer></script>
 {% endblock %}
 {% block contenu %}
-<form>
+<form action="/account/create_account" method="POST">
     <div class="row text-black">
         <div class="form-group">
             <label for="input_nom">Name</label>
-            <input type="text" name="nom" id="input_nom" value="" class="form-control">
+            <input type="text" name="nom" id="input_nom" value="{{ invalidation.nom }}" class="form-control {{ invalidation.classe_nom }}">
+            <div class="invalid-feedback">{{ invalidation.texte_nom }}</div>
         </div>
         <div class="form-group">
              <label for="input_courriel">Email</label>
-            <input type="email" name="input_courriel" id="input_courriel" class="form-control">
+            <input type="email" name="input_courriel" value="{{ invalidation.courriel }}" id="input_courriel" class="form-control {{ invalidation.classe_courriel }}">
+            <div class="invalid-feedback">{{ invalidation.texte_courriel }}</div>
         </div>
         <div class="form-group">
             <label for="input_mdp">Password</label>
-            <input class="form-control" type="password" name="input_mdp" id="input_mdp">
+            <input class="form-control {{ invalidation.classe_mdp }}" type="password" name="input_mdp" id="input_mdp">
+            <div class="invalid-feedback">{{ invalidation.texte_mdp}}</div>
         </div>
         <div class="form-group">
             <label for="input_mdp_double">Password Confirmation</label>
-            <input class="form-control" type="password" name="input_mdp_double" id="input_mdp_double">
+            <input class="form-control {{ invalidation.classe_mdp2 }}" type="password" name="input_mdp_double" id="input_mdp_double">
+            <div class="invalid-feedback">{{ invalidation.texte_mdp2}}</div>
         </div>
         <div class="form-check d-flex justify-content-center align-items-center">
             <label class="form-check-label" for="chk_console">Console player :</label>
             <input class="form-check-input p-3 m-3" type="checkbox" name="chk_console" id="chk_console">
         </div>
     </div>
-{#    <div class="invalid-feedback">{{ texte_invalide }}</div>#}
     <div class="d-flex justify-content-center">
          <input type="submit" class="button btn-primary my-3" value="Create my account">
     </div>

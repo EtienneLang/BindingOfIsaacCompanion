@@ -12,7 +12,6 @@ function validerNom(){
     if (inputNom.value.length < 3 || inputNom.value.length > 30) {
         inputNom.classList.add("is-invalid")
         inputNom.classList.remove("is-valid")
-
     }
     else{
         inputNom.classList.remove("is-invalid")
