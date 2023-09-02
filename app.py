@@ -3,7 +3,6 @@ from api import bp_api
 from steamAuthOpenId import bp_steamAuth
 from account import bp_account
 import database
-from flask import Flask
 from flask_pymongo import PyMongo
 
 
@@ -38,6 +37,7 @@ def index():
 @app.route('/ads.txt')
 def ads():
     return send_from_directory('./', 'ads.txt')
+
 
 @app.errorhandler(500)
 def server_error(e):
