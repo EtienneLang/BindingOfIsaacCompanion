@@ -9,7 +9,7 @@ def create_user(name, email, password, console):
         {'email': email},
         {'password': password},
         {'console': console},
-        {'achievements': create_empty_achievement_dictionnary()}
+        {'achievements': []}
     )
 
 
@@ -17,9 +17,3 @@ def email_already_existing(email):
     if mongo.dbusers.find({'email': email}):
         return True
     return False
-
-def create_empty_achievement_dictionnary():
-    dico = {}
-    for i in range(637):
-        dico[i] = False
-    return dico
