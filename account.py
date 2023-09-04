@@ -26,6 +26,22 @@ def create_account():
     return render_template("index.jinja")
     # database.create_account(utilisateur["nom"], utilisateur["courriel"], utilisateur["mdp"])
 
+@bp_account.route("/login", methods=["GET", "POST"])
+def login():
+
+    if request.method == "GET":
+        return render_template("login.jinja", invalidation=None)
+
+    if request.method == "POST":
+        email = request.form.get("courriel", default="")
+        password = request.form.get("mdp", default="")
+        user = database.login(email, hacher_mdp(password))
+        if not user:
+            return render_template("login.jinja", invalidation="Invalid email or password")
+        session["user"] = user["_id"]
+
+    return render_template("index.jinja")
+
 
 def valider_creation_compte():
     """Permets de valider les champs de la création d'un compte"""

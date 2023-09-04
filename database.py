@@ -1,3 +1,4 @@
+from flask import session
 from flask_pymongo import PyMongo, MongoClient
 
 def get_database():
@@ -17,6 +18,30 @@ def create_user(name, email, password, console = True):
         'console': console,
         'achievements': []
     }
+    )
+
+
+def login(email, password):
+    client = get_database()
+    user = client.dbUsers.Users.find_one({'email': email})
+    if user:
+        if user['password'] == password:
+            return user["_id"]
+    return None
+
+
+def get_user(id):
+    client = get_database()
+    return client.dbUsers.Users.find_one({'_id': id})
+
+
+def add_steam_id(steam_id):
+    client = get_database()
+    client.dbUsers.Users.add_one(
+        #Trouver l'utilisateur avec le email
+        {'_id': session["user"]["_id"]},
+        #Ajouter ou modifier le steam_id
+        {set: {'steam_id': steam_id}}
     )
 
 
