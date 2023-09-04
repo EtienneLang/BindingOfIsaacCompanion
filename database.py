@@ -1,19 +1,28 @@
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, MongoClient
 
-mongo = PyMongo()
+def get_database():
+    # Provide the mongodb atlas url to connect python to mongodb using pymongo
+    CONNECTION_STRING = "mongodb+srv://etiennelanglois007:269Mongo6880823@dbusers.0l4pngm.mongodb.net/dbUsers"
+
+    # Create a connection using MongoClient. You can import MongoClient or use pymongo.MongoClient
+    return MongoClient(CONNECTION_STRING)
 
 
-def create_user(name, email, password, console):
-    mongo.dbusers.insert_many(
-        {'name': name},
-        {'email': email},
-        {'password': password},
-        {'console': console},
-        {'achievements': []}
+def create_user(name, email, password, console = True):
+    client = get_database()
+    client.dbUsers.Users.insert_one({
+        'name': name,
+        'email': email,
+        'password': password,
+        'console': console,
+        'achievements': []
+    }
     )
 
 
 def email_already_existing(email):
-    if mongo.dbusers.find({'email': email}):
+    client = get_database()
+    client.dbUsers.Users.find_one({'email': email})
+    if client.dbUsers.Users.find_one({'email': email}):
         return True
     return False

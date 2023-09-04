@@ -14,17 +14,17 @@
         </div>
         <div class="form-group">
              <label for="input_courriel">Email</label>
-            <input type="email" name="input_courriel" value="{{ invalidation.courriel }}" id="input_courriel" class="form-control {{ invalidation.classe_courriel }}">
+            <input type="email" name="courriel" value="{{ invalidation.courriel }}" id="input_courriel" class="form-control {{ invalidation.classe_courriel }}">
             <div class="invalid-feedback">{{ invalidation.texte_courriel }}</div>
         </div>
         <div class="form-group">
             <label for="input_mdp">Password</label>
-            <input class="form-control {{ invalidation.classe_mdp }}" type="password" name="input_mdp" id="input_mdp">
+            <input class="form-control {{ invalidation.classe_mdp }}" type="password" name="mdp" id="input_mdp" value="{{ invalidation.mdp }}">
             <div class="invalid-feedback">{{ invalidation.texte_mdp}}</div>
         </div>
         <div class="form-group">
             <label for="input_mdp_double">Password Confirmation</label>
-            <input class="form-control {{ invalidation.classe_mdp2 }}" type="password" name="input_mdp_double" id="input_mdp_double">
+            <input class="form-control {{ invalidation.classe_mdp2 }}" type="password" name="mdp2" id="input_mdp_double" value="{{ invalidation.mdp2 }}">
             <div class="invalid-feedback">{{ invalidation.texte_mdp2}}</div>
         </div>
         <div class="form-check d-flex justify-content-center align-items-center">

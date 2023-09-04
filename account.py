@@ -1,13 +1,15 @@
+import hashlib
+
 from flask import Blueprint, render_template, request, redirect, session, current_app as app, jsonify, abort, json, Response
 import re
-
-import database
-
 bp_account = Blueprint('bp_account', __name__)
-
+import database
 reg_email = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 reg_html = re.compile(r'<(.*)>.*?|<(.*) />')
 
+def hacher_mdp(mdp_en_clair):
+    """Prend un mot de passe en clair et lui applique une fonction de hachage"""
+    return hashlib.sha512(mdp_en_clair.encode()).hexdigest()
 
 @bp_account.route("/create_account", methods=["GET", "POST"])
 def create_account():
@@ -19,8 +21,10 @@ def create_account():
         return render_template("create_account.jinja",
                                invalidation=invalidation
                                )
-    utilisateur = invalidation
-    database.create_account(utilisateur["nom"], utilisateur["courriel"], utilisateur["mdp"])
+    # utilisateur = invalidation
+    database.create_user(invalidation["nom"], invalidation["courriel"], invalidation["mdp"])
+    return render_template("index.jinja")
+    # database.create_account(utilisateur["nom"], utilisateur["courriel"], utilisateur["mdp"])
 
 
 def valider_creation_compte():
@@ -112,14 +116,16 @@ def valider_creation_compte():
             "nom": nom,
             "classe_nom": classe_nom,
             "texte_nom": texte_nom,
+            "mdp": mdp,
             "classe_mdp": classe_mdp,
             "texte_mdp": texte_mdp,
+            "mdp2": mdp2,
             "classe_mdp2": classe_mdp2,
             "texte_mdp2": texte_mdp2
         }
         return invalidation
 
-    # mdp = hacher_mdp(mdp)
+    mdp = hacher_mdp(mdp)
     utilisateur = {
         "form_valide": form_valide,
         "courriel": courriel,
