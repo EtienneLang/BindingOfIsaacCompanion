@@ -5,6 +5,10 @@ const buttonCharactersStats = document.getElementById("characters-stats");
 const buttonItemsStats = document.getElementById("items-stats");
 const divStatsAchievements = document.getElementById("stats-achievements");
 const divNextAchievement = document.getElementById("next-unlock");
+const buttonManullyProgression = document.getElementById("manually_completed_button");
+const divMyStatsPage = document.getElementById("my_stats_page");
+const divManualProgression = document.getElementById("manual_progression");
+const divManualProgressionSetter = document.getElementById("manual_progression_setter");
 
 let controleur = null;
 
@@ -173,10 +177,48 @@ function afficherCardsAchievementProgression(dataProgression) {
         divStatsAchievements.append(div1);
     }
 }
+
+function showCharacterHeadsManualProgression() {
+    let i= 0;
+
+    for (let character in dicoTetePerso) {
+        const div = document.createElement("div");
+        div.classList.add("d-flex");
+        div.classList.add("justify-content-between");
+        div.classList.add("align-items-center");
+        div.classList.add("bg-primary");
+        div.classList.add("rounded-3");
+        div.classList.add("col-lg-3");
+        div.classList.add("col-md-6");
+        div.classList.add("col-6");
+        div.classList.add("text-white");
+        const img = document.createElement("img");
+        img.classList.add("img-fluid");
+        img.classList.add("rounded-3");
+        img.classList.add("w-25");
+        img.src = dicoTetePerso[character];
+        div.append(img);
+        const titleCharacter = document.createElement("h4");
+        titleCharacter.innerHTML = Object.keys(dataAllAchievements)[i];
+        div.append(titleCharacter);
+        divManualProgressionSetter.append(div);
+        i++;
+    }
+}
+
+function showManualProgression() {
+    divMyStatsPage.classList.add("d-none");
+    divManualProgression.classList.remove("d-none");
+    let btnMarks = document.getElementById("manual-marks");
+    let btnChallenge = document.getElementById("manual-challenges");
+    btnMarks.addEventListener('click', showCharacterHeadsManualProgression);
+}
+
 async function initialisation() {
     buttonMainStats.addEventListener('click', gererClickMenu);
     buttonCharactersStats.addEventListener('click', gererClickMenu);
     buttonItemsStats.addEventListener('click', gererClickMenu);
+    buttonManullyProgression.addEventListener('click', showManualProgression);
 }
 
 window.addEventListener('load', initialisation);

@@ -5,7 +5,8 @@
     <script src="/static/js/playerStats.js" defer></script>
 {% endblock %}
 {% block contenu %}
-    <div class="text-center">
+    <section id="my_stats_page">
+       <div class="text-center">
         <h1>Hello {{ player_name }} !</h1>
         <img src="{{ profile_pic }}" class="border border-dark" alt="Profile Picture">
         <p class="mt-4">Achievements Unlocked : {{ achievements_completed }}</p>
@@ -19,11 +20,10 @@
             <img src="{{ i }}" alt="achievement{{ i }}" class="col-md-1 col-3 p-2" alt="Achievement{{ i }}">
         {% endfor %}
         </div>
+        <div id="manually_completed_button" class="btn-stats-achievement col-sm-12 col-md-3">
+            Manually put what you completed
+        </div>
     </div>
-{#    <div class="next-unlock">#}
-{#        <h4>Next, you should unlock this : </h4>#}
-{#    </div>#}
-
     <h3 class="text-center">Progresion</h3>
     <p class="text-center">Go in the <a id="guideLinkText" href="/api/guide">GUIDE</a> if you don't know how to beat a certain boss</p>
     <div class="row text-center mt-3 mb-3 justify-content-around align-items-center mr-5 ml-5">
@@ -37,10 +37,26 @@
             Items Progression
         </div>
     </div>
+    <div id="stats-achievements" class="row justify-content-center"></div>
+    </section>
+    {#  Section pour entrer les trucs manuellement  #}
+    <section id="manual_progression" class="d-none">
+        <h2>
+            What did you complete?
+        </h2>
+        <p class="text-center">Here, you can manually complete an achievement. This is useful if you have completed an achievement but it is not showing up on the website. You can also use this if you want to cheat, but that's not cool."</p>
+        <div class="row justify-content-center">
+            <div id="manual-marks" class="btn-stats-achievement col-sm-12 col-md-3">
+                Completion marks
+            </div>
+            <div id="manual-challenges" class="btn-stats-achievement col-sm-12 col-md-3">
+                Challenges
+            </div>
+        </div>
+        <div id="manual_progression_setter" class="row g-2">
 
-    <div id="stats-achievements" class="row justify-content-center">
-
-    </div>
+        </div>
+    </section>
 
 
 {% endblock %}
